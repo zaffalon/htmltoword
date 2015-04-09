@@ -1,9 +1,9 @@
 # encoding: UTF-8
-require 'action_controller'
-require 'action_view'
+# require 'action_controller'
+# require 'action_view'
 require 'nokogiri'
 require 'zip'
-require 'htmltoword/configuration'
+require_relative 'htmltoword/configuration'
 
 module Htmltoword
   class << self
@@ -20,7 +20,7 @@ module Htmltoword
 end
 
 
-require 'htmltoword/version'
-require 'htmltoword/htmltoword_helper'
-require 'htmltoword/document'
-require 'htmltoword/action_controller'
+require_relative 'htmltoword/version'
+require_relative 'htmltoword/htmltoword_helper'
+require_relative 'htmltoword/document'
+require_relative 'htmltoword/action_controller'
