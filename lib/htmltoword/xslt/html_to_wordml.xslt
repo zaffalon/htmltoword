@@ -9,10 +9,12 @@
                 xmlns:msxsl="urn:schemas-microsoft-com:xslt"
                 xmlns:ext="http://www.xmllab.net/wordml2html/ext"
                 xmlns:java="http://xml.apache.org/xalan/java"
-                xmlns:str="http://exslt.org/common"
+                xmlns:str="http://exslt.org/strings"
+                xmlns:func="http://exslt.org/functions"
                 xmlns:fn="http://www.w3.org/2005/xpath-functions"
                 version="1.0"
-                exclude-result-prefixes="java msxsl ext w o v WX aml w10">
+                exclude-result-prefixes="java msxsl ext w o v WX aml w10"
+                extension-element-prefixes="func">
 
 
   <xsl:output method="xml" encoding="utf-8" omit-xml-declaration="no" indent="yes" />
@@ -262,8 +264,44 @@
     </w:tc>
   </xsl:template>
 
+  <func:function name="func:substring-before-if-contains">
+    <xsl:param name="arg"/>
+    <xsl:param name="delim"/>
+    <func:result>
+      <xsl:choose>
+        <xsl:when test="contains($arg, $delim)">
+          <xsl:value-of select="substring-before($arg, $delim)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$arg"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </func:result>
+  </func:function>
+
   <xsl:template match="td">
     <w:tc>
+      <xsl:choose>
+        <xsl:when test="contains(@class, 'ms-border-')">
+          <w:tcPr>
+            <w:tcBorders>
+              <xsl:for-each select="str:tokenize(@class, ' ')">
+                <xsl:if test="contains(., 'ms-border-')">
+                  <xsl:variable name="border" select="substring-after(., 'ms-border-')"/>
+                  <xsl:variable name="border-location" select="substring-before($border, '-')" />
+                  <xsl:variable name="border-value" select="substring-after($border, '-')" />
+                  <xsl:element name="w:{$border-location}">
+                    <xsl:attribute name="w:val"><xsl:value-of select="$border-value" /></xsl:attribute>
+                    <xsl:attribute name="w:sz">6</xsl:attribute>
+                    <xsl:attribute name="w:space">0</xsl:attribute>
+                    <xsl:attribute name="w:color">000000</xsl:attribute>
+                  </xsl:element>
+                </xsl:if>
+              </xsl:for-each>
+            </w:tcBorders>
+          </w:tcPr>
+        </xsl:when>
+      </xsl:if>
       <xsl:call-template name="block">
         <xsl:with-param name="current" select="." />
         <xsl:with-param name="class" select="@class" />
