@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require 'methadone'
+require_relative '../lib/htmltoword'
+
+include Methadone::Main
+include Methadone::CLILogging
+
+main do |html, output|
+  puts "Converting #{html} to #{output}" if options[:verbose]
+  html_string = File.read html
+  temp = Htmltoword::Document.create html_string, output
+  FileUtils.cp temp, output
+end
+
+version Htmltoword::VERSION
+description 'Convert simple html to MS Word (docx)'
+arg :html, :required
+arg :output, :required
+
+on('--verbose', '-v', 'Be verbose')
+# options['ip-address'] = '127.0.0.1'
+# on('-i IP_ADDRESS', '--ip-address', 'IP Address', /^\d+\.\d+\.\d+\.\d+$/)
+
+go!
