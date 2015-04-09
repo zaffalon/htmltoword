@@ -81,7 +81,7 @@ Example of _my_partial.docx.erb
 # Add mime-type in /config/initializers/mime_types.rb:
 Mime::Type.register "application/vnd.openxmlformats-officedocument.wordprocessingml.document", :docx
 
-# Add docx reponder in your controler
+# Add docx responder in your controller
 def show
   respond_to do |format|
     format.docx do
