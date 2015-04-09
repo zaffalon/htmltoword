@@ -715,7 +715,8 @@ describe "XSLT for tables" do
           <w:tc>
             <w:tcPr>
               <w:tcBorders>
-                <w:bottom w:val="apples" w:sz="6" w:space="0" w:color="000000"/>
+                <w:bottom w:val="dashed" w:sz="6" w:space="0" w:color="000000"/>
+                <w:right w:val="single" w:sz="6" w:space="0" w:color="000000"/>
               </w:tcBorders>
             </w:tcPr>
             <w:p>
