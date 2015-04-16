@@ -1,23 +1,34 @@
 #!/usr/bin/env ruby
 require 'methadone'
+require 'rmultimarkdown'
 require_relative '../lib/htmltoword'
 
 include Methadone::Main
 include Methadone::CLILogging
 
-main do |html, output|
-  puts "Converting #{html} to #{output}" if options[:verbose]
-  html_string = File.read html
-  temp = Htmltoword::Document.create html_string, output
+main do |input, output|
+  puts "Converting #{input} to #{output}" if options[:verbose]
+  markup = File.read input
+  if options[:format] == 'markdown'
+    markup = markdown2html(markup)
+  end
+  temp = Htmltoword::Document.create markup, output
   FileUtils.cp temp, output
+  puts "Done" if options[:verbose]
+end
+
+def markdown2html(text)
+  MultiMarkdown.new(text.to_s).to_html
 end
 
 version Htmltoword::VERSION
-description 'Convert simple html to MS Word (docx)'
-arg :html, :required
+description 'Convert simple html input (or markdown) to MS Word (docx)'
+arg :input, :required
 arg :output, :required
 
 on('--verbose', '-v', 'Be verbose')
+on('-f FORMAT', '--format', 'Format', /markdown|html/)
+
 # options['ip-address'] = '127.0.0.1'
 # on('-i IP_ADDRESS', '--ip-address', 'IP Address', /^\d+\.\d+\.\d+\.\d+$/)
 
