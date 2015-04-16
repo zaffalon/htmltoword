@@ -93,6 +93,13 @@
 
   <xsl:template match="li">
     <w:p>
+      <w:pPr>
+        <w:pStyle w:val="ListParagraph"/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
       <w:r>
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
       </w:r>
@@ -216,7 +223,7 @@
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblW w:w="5000" w:type="pct"/>
         <xsl:call-template name="tableborders"/>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
@@ -367,6 +374,15 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:template match="blockquote">
+    <w:p>
+      <w:pPr>
+        <w:spacing w:afterLines="200" />
+      </w:pPr>
+    </w:p>
+    <xsl:apply-templates/>
+  </xsl:template>
+
   <xsl:template match="*">
     <xsl:apply-templates/>
   </xsl:template>
@@ -389,4 +405,26 @@
       </w:pPr>
     </xsl:if>
   </xsl:template>
+
+  <!-- <xsl:template name="numbering-def">
+    <w:num w:numId="1">
+      <w:abstractNumId w:val="0" />
+    </w:num>
+    <w:abstractNum w:abstractNumId="0">
+      <w:nsid w:val="FFFFFF7F" />
+      <w:multiLevelType w:val="singleLevel" />
+      <w:lvl w:ilvl="0">
+        <w:start w:val="1" />
+        <w:lvlText w:val="%1." />
+        <w:lvlJc w:val="left" />
+        <w:pPr>
+          <w:tabs>
+            <w:tab w:val="num" w:pos="720" />
+          </w:tabs>
+          <w:ind w:left="720" w:hanging="360" />
+        </w:pPr>
+      </w:lvl>
+    </w:abstractNum>
+  </xsl:template> -->
+
 </xsl:stylesheet>
