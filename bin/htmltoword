@@ -12,7 +12,7 @@ main do |input, output|
   if options[:format] == 'markdown'
     markup = markdown2html(markup)
   end
-  temp = Htmltoword::Document.create markup, output
+  temp = Htmltoword::Document.create markup, output, options[:template_name], options[:extras]
   FileUtils.cp temp, output
   puts "Done" if options[:verbose]
 end
@@ -27,6 +27,8 @@ arg :input, :required
 arg :output, :required
 
 on('--verbose', '-v', 'Be verbose')
+on('--extras', '-e', 'Use extra formatting features')
+on('--template', '-t', 'Use custom word base template (.docx file)')
 on('-f FORMAT', '--format', 'Format', /markdown|html/)
 
 # options['ip-address'] = '127.0.0.1'

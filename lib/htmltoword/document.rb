@@ -3,19 +3,19 @@ module Htmltoword
     class << self
       include HtmltowordHelper
 
-      def create content, file_name, template_name=nil
+      def create(content, file_name, template_name = nil, extras = false)
         file_name += extension unless file_name =~ /\.docx$/
         template_name += extension if template_name && !(template_name =~ /\.docx$/)
         word_file = new(template_file(template_name), file_name)
-        word_file.replace_file content
+        word_file.replace_file(content, Document.doc_xml_file, extras)
         word_file.save
       end
 
-      def create_with_content template, file_name, content, set=nil
+      def create_with_content(template, file_name, content, set=nil, extras = false)
         template += extension unless template =~ /\.docx$/
         word_file = new(template_file(template), file_name)
         content = replace_values(content, set) if set
-        word_file.replace_file content
+        word_file.replace_file(content, Document.doc_xml_file, extras)
         word_file.save
       end
 
@@ -27,8 +27,8 @@ module Htmltoword
         'word/document.xml'
       end
 
-      def default_xslt_template
-        File.join(Htmltoword.config.default_xslt_path, 'html_to_wordml.xslt')
+      def xslt_template(extras = false)
+        File.join(Htmltoword.config.default_xslt_path, (extras ? 'htmltoword.xslt' : 'base.xslt'))
       end
     end
 
@@ -68,13 +68,14 @@ module Htmltoword
       end
     end
 
-    def replace_file html, file_name=Document.doc_xml_file
+    def replace_file(html, file_name = Document.doc_xml_file, extras = false)
       html = html.presence || '<body></body>'
-      source = Nokogiri::HTML(html.gsub(/>\s+</, "><"))
-      xslt = Nokogiri::XSLT( File.read(Document.default_xslt_template) )
-      source = xslt.transform( source ) unless (source/"/html").blank?
+      source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
+      template = Document.xslt_template(extras)
+      xslt = Nokogiri::XSLT(File.open(template))
+      source = xslt.transform(source) #unless (source / '/html').blank?
+      puts source.to_s
       @replaceable_files[file_name] = source.to_s
     end
-
   end
 end

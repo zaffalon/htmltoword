@@ -15,8 +15,6 @@
                 version="1.0"
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
-
-
   <xsl:output method="xml" encoding="utf-8" omit-xml-declaration="no" indent="yes" />
 
   <xsl:template match="/">
@@ -88,21 +86,6 @@
     <w:p>
       <xsl:call-template name="text-alignment" />
       <xsl:apply-templates />
-    </w:p>
-  </xsl:template>
-
-  <xsl:template match="li">
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="ListParagraph"/>
-        <w:numPr>
-          <w:ilvl w:val="0"/>
-          <w:numId w:val="1"/>
-        </w:numPr>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-      </w:r>
     </w:p>
   </xsl:template>
 
@@ -223,7 +206,6 @@
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="5000" w:type="pct"/>
         <xsl:call-template name="tableborders"/>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
@@ -271,44 +253,8 @@
     </w:tc>
   </xsl:template>
 
-  <func:function name="func:substring-before-if-contains">
-    <xsl:param name="arg"/>
-    <xsl:param name="delim"/>
-    <func:result>
-      <xsl:choose>
-        <xsl:when test="contains($arg, $delim)">
-          <xsl:value-of select="substring-before($arg, $delim)"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$arg"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </func:result>
-  </func:function>
-
   <xsl:template match="td">
     <w:tc>
-      <xsl:choose>
-        <xsl:when test="contains(@class, 'ms-border-')">
-          <w:tcPr>
-            <w:tcBorders>
-              <xsl:for-each select="str:tokenize(@class, ' ')">
-                <xsl:if test="contains(., 'ms-border-')">
-                  <xsl:variable name="border" select="substring-after(., 'ms-border-')"/>
-                  <xsl:variable name="border-location" select="substring-before($border, '-')" />
-                  <xsl:variable name="border-value" select="substring-after($border, '-')" />
-                  <xsl:element name="w:{$border-location}">
-                    <xsl:attribute name="w:val"><xsl:value-of select="$border-value" /></xsl:attribute>
-                    <xsl:attribute name="w:sz">6</xsl:attribute>
-                    <xsl:attribute name="w:space">0</xsl:attribute>
-                    <xsl:attribute name="w:color">000000</xsl:attribute>
-                  </xsl:element>
-                </xsl:if>
-              </xsl:for-each>
-            </w:tcBorders>
-          </w:tcPr>
-        </xsl:when>
-      </xsl:if>
       <xsl:call-template name="block">
         <xsl:with-param name="current" select="." />
         <xsl:with-param name="class" select="@class" />
@@ -374,15 +320,6 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template match="blockquote">
-    <w:p>
-      <w:pPr>
-        <w:spacing w:afterLines="200" />
-      </w:pPr>
-    </w:p>
-    <xsl:apply-templates/>
-  </xsl:template>
-
   <xsl:template match="*">
     <xsl:apply-templates/>
   </xsl:template>
@@ -405,26 +342,5 @@
       </w:pPr>
     </xsl:if>
   </xsl:template>
-
-  <!-- <xsl:template name="numbering-def">
-    <w:num w:numId="1">
-      <w:abstractNumId w:val="0" />
-    </w:num>
-    <w:abstractNum w:abstractNumId="0">
-      <w:nsid w:val="FFFFFF7F" />
-      <w:multiLevelType w:val="singleLevel" />
-      <w:lvl w:ilvl="0">
-        <w:start w:val="1" />
-        <w:lvlText w:val="%1." />
-        <w:lvlJc w:val="left" />
-        <w:pPr>
-          <w:tabs>
-            <w:tab w:val="num" w:pos="720" />
-          </w:tabs>
-          <w:ind w:left="720" w:hanging="360" />
-        </w:pPr>
-      </w:lvl>
-    </w:abstractNum>
-  </xsl:template> -->
 
 </xsl:stylesheet>
