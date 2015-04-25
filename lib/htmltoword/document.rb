@@ -74,7 +74,6 @@ module Htmltoword
       template = Document.xslt_template(extras)
       xslt = Nokogiri::XSLT(File.open(template))
       source = xslt.transform(source) #unless (source / '/html').blank?
-      puts source.to_s
       @replaceable_files[file_name] = source.to_s
     end
   end
