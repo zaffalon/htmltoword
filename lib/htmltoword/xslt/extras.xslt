@@ -45,8 +45,8 @@
     </w:tbl>
   </xsl:template>
 
-  <!-- Advanced td cell borders -->
-  <xsl:template match="td">
+  <!-- Advanced cell transformation -->
+  <xsl:template match="td|th">
     <w:tc>
       <xsl:choose>
         <xsl:when test="contains(@class, 'ms-border-')">
