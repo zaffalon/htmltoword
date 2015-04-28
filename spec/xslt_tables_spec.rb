@@ -632,7 +632,8 @@ describe "XSLT for tables" do
         <tbody>
           <tr>
             <td>Sum total</td>
-            <td class="ms-border-bottom-dashed ms-border-right-single">1.000.000</td>
+            <td class="ms-fill-C3C3C3">:</td>
+            <td class="ms-border-bottom-dashed-red ms-border-right-single">1.000.000</td>
           </tr>
         </tbody>
       </table>
@@ -657,6 +658,7 @@ describe "XSLT for tables" do
         </w:tblPr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">Sum total</w:t>
@@ -665,8 +667,18 @@ describe "XSLT for tables" do
           </w:tc>
           <w:tc>
             <w:tcPr>
+              <w:shd w:val="clear" w:color="auto" w:fill="C3C3C3"/>
+            </w:tcPr>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">:</w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+          <w:tc>
+            <w:tcPr>
               <w:tcBorders>
-                <w:bottom w:val="dashed" w:sz="6" w:space="0" w:color="000000"/>
+                <w:bottom w:val="dashed" w:sz="6" w:space="0" w:color="red"/>
                 <w:right w:val="single" w:sz="6" w:space="0" w:color="000000"/>
               </w:tcBorders>
             </w:tcPr>

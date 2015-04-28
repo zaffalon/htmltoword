@@ -48,27 +48,21 @@
   <!-- Advanced cell transformation -->
   <xsl:template match="td|th">
     <w:tc>
-      <xsl:choose>
-        <xsl:when test="contains(@class, 'ms-border-')">
-          <w:tcPr>
-            <w:tcBorders>
-              <xsl:for-each select="str:tokenize(@class, ' ')">
-                <xsl:if test="contains(., 'ms-border-')">
-                  <xsl:variable name="border" select="substring-after(., 'ms-border-')"/>
-                  <xsl:variable name="border-location" select="substring-before($border, '-')" />
-                  <xsl:variable name="border-value" select="substring-after($border, '-')" />
-                  <xsl:element name="w:{$border-location}">
-                    <xsl:attribute name="w:val"><xsl:value-of select="$border-value" /></xsl:attribute>
-                    <xsl:attribute name="w:sz">6</xsl:attribute>
-                    <xsl:attribute name="w:space">0</xsl:attribute>
-                    <xsl:attribute name="w:color">000000</xsl:attribute>
-                  </xsl:element>
-                </xsl:if>
-              </xsl:for-each>
-            </w:tcBorders>
-          </w:tcPr>
-        </xsl:when>
-      </xsl:choose>
+      <w:tcPr>
+        <xsl:if test="contains(@class, 'ms-border-')">
+          <w:tcBorders>
+            <xsl:for-each select="str:tokenize(@class, ' ')">
+              <xsl:call-template name="define-border">
+                <xsl:with-param name="class" select="." />
+              </xsl:call-template>
+            </xsl:for-each>
+          </w:tcBorders>
+        </xsl:if>
+        <xsl:if test="contains(@class, 'ms-fill-')">
+          <xsl:variable name="cell-bg" select="str:tokenize(substring-after(@class, 'ms-fill-'), ' ')[1]"/>
+          <w:shd w:val="clear" w:color="auto" w:fill="{$cell-bg}" />
+        </xsl:if>
+      </w:tcPr>
       <xsl:call-template name="block">
         <xsl:with-param name="current" select="." />
         <xsl:with-param name="class" select="@class" />
@@ -125,4 +119,31 @@
     <xsl:apply-templates />
   </xsl:template>
 
+  <xsl:template name="define-border">
+    <xsl:param name="class" />
+    <xsl:if test="contains($class, 'ms-border-')">
+      <xsl:variable name="border" select="substring-after($class, 'ms-border-')"/>
+      <xsl:variable name="border-properties" select="str:tokenize($border, '-')"/>
+      <xsl:variable name="border-location" select="$border-properties[1]" />
+      <xsl:variable name="border-value" select="$border-properties[2]" />
+      <xsl:variable name="border-color">
+        <xsl:choose>
+          <xsl:when test="string-length($border-properties[3]) > 0"><xsl:value-of select="$border-properties[3]"/></xsl:when>
+          <xsl:otherwise>000000</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="border-size">
+        <xsl:choose>
+          <xsl:when test="string-length($border-properties[4]) > 0"><xsl:value-of select="$border-properties[4] * 6"/></xsl:when>
+          <xsl:otherwise>6</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:element name="w:{$border-location}">
+        <xsl:attribute name="w:val"><xsl:value-of select="$border-value" /></xsl:attribute>
+        <xsl:attribute name="w:sz"><xsl:value-of select="$border-size" /></xsl:attribute>
+        <xsl:attribute name="w:space">0</xsl:attribute>
+        <xsl:attribute name="w:color"><xsl:value-of select="$border-color" /></xsl:attribute>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
 </xsl:stylesheet>
