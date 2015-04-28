@@ -209,10 +209,6 @@
         <xsl:call-template name="tableborders"/>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <xsl:apply-templates />
     </w:tbl>
   </xsl:template>
