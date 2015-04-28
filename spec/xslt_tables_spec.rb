@@ -23,7 +23,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
           <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -34,10 +33,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -85,7 +80,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
           <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -96,10 +90,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -112,7 +102,6 @@ describe "XSLT for tables" do
           <w:tbl>
             <w:tblPr>
               <w:tblStyle w:val="TableGrid"/>
-              <w:tblW w:w="0" w:type="auto"/>
               <w:tblBorders>
                 <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
                 <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -123,10 +112,6 @@ describe "XSLT for tables" do
               </w:tblBorders>
               <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
             </w:tblPr>
-            <w:tblGrid>
-              <w:gridCol w:w="2310"/>
-              <w:gridCol w:w="2310"/>
-            </w:tblGrid>
             <w:tr>
               <w:tc>
                 <w:p>
@@ -182,7 +167,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
           <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -193,10 +177,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -246,7 +226,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
           <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -257,10 +236,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -334,7 +309,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
           <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -345,10 +319,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -428,7 +398,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
           <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -439,10 +408,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -468,7 +433,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
           <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -479,10 +443,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -535,7 +495,6 @@ describe "XSLT for tables" do
     <w:tbl>
       <w:tblPr>
         <w:tblStyle w:val="TableGrid"/>
-        <w:tblW w:w="0" w:type="auto"/>
         <w:tblBorders>
           <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
           <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -546,10 +505,6 @@ describe "XSLT for tables" do
         </w:tblBorders>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
       </w:tblPr>
-      <w:tblGrid>
-        <w:gridCol w:w="2310"/>
-        <w:gridCol w:w="2310"/>
-      </w:tblGrid>
       <w:tr>
         <w:tc>
           <w:p>
@@ -689,7 +644,7 @@ describe "XSLT for tables" do
       <w:tbl>
         <w:tblPr>
           <w:tblStyle w:val="TableGrid"/>
-          <w:tblW w:w="0" w:type="auto"/>
+          <w:tblW w:w=\"5000\" w:type=\"pct\"/>
           <w:tblBorders>
             <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
             <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -700,10 +655,6 @@ describe "XSLT for tables" do
           </w:tblBorders>
           <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
         </w:tblPr>
-        <w:tblGrid>
-          <w:gridCol w:w="2310"/>
-          <w:gridCol w:w="2310"/>
-        </w:tblGrid>
         <w:tr>
           <w:tc>
             <w:p>
@@ -729,6 +680,6 @@ describe "XSLT for tables" do
       </w:tbl>
     </w:body>
     EOL
-    compare_resulting_wordml_with_expected(html, expected_wordml.strip)
+    compare_resulting_wordml_with_expected(html, expected_wordml.strip, extras: true)
   end
 end
