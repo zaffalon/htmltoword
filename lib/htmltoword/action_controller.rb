@@ -29,11 +29,12 @@ ActionController::Renderers.add :docx do |filename, options|
 
   # other properties
   word_template = options.delete(:word_template) || nil
+  extras = options.delete(:extras) || false
   # content will come from property content unless not specified
   # then it will look for a template.
   content = options.delete(:content) || render_to_string(options)
 
-  doc = Htmltoword::Document.create content, file_name, word_template
+  doc = Htmltoword::Document.create content, file_name, word_template, extras
   send_data File.read(doc.path), filename: file_name, type: Mime::DOCX, disposition: disposition
 end
 
