@@ -18,56 +18,54 @@ describe "XSLT for Headings" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading1"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 1</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading2"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 2</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading3"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 3</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading4"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 4</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading5"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 5</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading6"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 6</w:t>
-      </w:r>
-    </w:p>
-  </w:body>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading1"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 1</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading2"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 2</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading3"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 3</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading4"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 4</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading5"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 5</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading6"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 6</w:t>
+    </w:r>
+  </w:p>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -90,56 +88,54 @@ describe "XSLT for Headings" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading1"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 1</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading2"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 2</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading3"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 3</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading4"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 4</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading5"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 5</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Heading6"/>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve">Heading 6</w:t>
-      </w:r>
-    </w:p>
-  </w:body>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading1"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 1</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading2"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 2</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading3"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 3</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading4"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 4</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading5"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 5</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="Heading6"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Heading 6</w:t>
+    </w:r>
+  </w:p>
     EOL
 
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
@@ -169,118 +165,116 @@ describe "XSLT for Headings" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading1"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">Heading 1</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> normal text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading2"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">Heading 2</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> normal text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading3"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">Heading 3</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> normal text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading4"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">Heading 4</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> normal text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading5"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">Heading 5</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> normal text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading6"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">Heading 6</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> normal text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-  </w:body>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">Heading 1</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> normal text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading2"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">Heading 2</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> normal text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading3"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">Heading 3</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> normal text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading4"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">Heading 4</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> normal text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading5"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">Heading 5</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> normal text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading6"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">Heading 6</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> normal text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -309,63 +303,61 @@ describe "XSLT for Headings" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-          <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"/>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Header 2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Cell 1,1</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Cell 1,2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-  </w:body>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"/>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Header 2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Cell 1,1</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Cell 1,2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -392,63 +384,61 @@ describe "XSLT for Headings" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Header 1</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"/>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Cell 1,1</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Cell 1,2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-  </w:body>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Header 1</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"/>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Cell 1,1</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Cell 1,2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -481,73 +471,71 @@ Using table-bordered class
     EOL
 
     expected_wordml = <<-EOL
-  <w:body>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Hello</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">World</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-    <w:p>
-      <w:r>
-        <w:t xml:space="preserve"> Using table-bordered class </w:t>
-      </w:r>
-    </w:p>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Hello world</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Part 2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-  </w:body>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Hello</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">World</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve"> Using table-bordered class </w:t>
+    </w:r>
+  </w:p>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Hello world</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Part 2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -578,133 +566,131 @@ Using table-bordered class
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Pre H1 </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:pPr>
-              <w:pStyle w:val="Heading1"/>
-            </w:pPr>
-            <w:r>
-              <w:t xml:space="preserve">This is a H1</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> Post H1</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Text </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">A paragraph with </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong</w:t>
-            </w:r>
-            <w:r>
-              <w:t xml:space="preserve"> text</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> More text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Some content </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve">inside</w:t>
-            </w:r>
-            <w:r>
-              <w:t xml:space="preserve"> a </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">div</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p/>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Something </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> Inside a p</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"> strong </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"> and strong em </w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Text inside div</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-  </w:body>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Pre H1 </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">This is a H1</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> Post H1</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Text </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">A paragraph with </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong</w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve"> text</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> More text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Some content </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve">inside</w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve"> a </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">div</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p/>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Something </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> Inside a p</w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> strong </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> and strong em </w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Text inside div</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
