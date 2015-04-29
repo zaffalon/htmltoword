@@ -57,7 +57,8 @@ module Htmltoword
             template_zip.each do |entry|
               out.put_next_entry entry.name
               if @replaceable_files[entry.name]
-                out.write(@replaceable_files[entry.name])
+                source = entry.get_input_stream.read.sub(/(<w:body>)(.*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\3")
+                out.write(source)
               else
                 out.write(template_zip.read(entry.name))
               end
@@ -73,8 +74,8 @@ module Htmltoword
       source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
       template = Document.xslt_template(extras)
       xslt = Nokogiri::XSLT(File.open(template))
-      source = xslt.transform(source) #unless (source / '/html').blank?
-      @replaceable_files[file_name] = source.to_s
+      source = xslt.apply_to(source).gsub(/\s*xmlns:(\w+)="(.*?)\s*"/,'')
+      @replaceable_files[file_name] = source
     end
   end
 end
