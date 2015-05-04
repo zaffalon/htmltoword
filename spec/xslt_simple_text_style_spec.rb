@@ -15,131 +15,129 @@ describe "XSLT to make text bold or italic" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:p>
-      <w:r>
-        <w:t xml:space="preserve"> Testing </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">italic</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve"> text within a div.</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:r>
-        <w:t xml:space="preserve"> Testing </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">italic</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve"> text within a p.</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:r>
-        <w:t xml:space="preserve"> Testing </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">italic</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve"> text within a span.</w:t>
-      </w:r>
-    </w:p>
-  </w:body>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve"> Testing </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">italic</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve"> text within a div.</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve"> Testing </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">italic</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve"> text within a p.</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve"> Testing </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">italic</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve"> text within a span.</w:t>
+    </w:r>
+  </w:p>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -169,319 +167,317 @@ describe "XSLT to make text bold or italic" do
   </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
   <w:p>
-      <w:r>
-        <w:t xml:space="preserve">
-  Combinations in p tag: </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Bold italic</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Italic bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Bold em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Em bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Strong italic</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Italic strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Strong em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">, </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Em strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">. Should be ok
+    <w:r>
+      <w:t xml:space="preserve">
+Combinations in p tag: </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Bold italic</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Italic bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Bold em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
 </w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:r>
-        <w:t xml:space="preserve">
-  More on combinations : </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just bold. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Bold italic.</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve"> Again just bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just italic. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Italic bold.</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve"> Again just italic</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just bold. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Bold em</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve"> Again just bold</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just em. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Em bold.</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve"> Again just em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just Strong. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Strong italic. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Again just strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just italic. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Italic strong. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">Again just italic </w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just Strong. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Strong em. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Again just strong</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">,
-  </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve">Just em. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">Em strong.</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:i/>
-        </w:rPr>
-        <w:t xml:space="preserve"> Again just em</w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">. Should be ok
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Em bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Strong italic</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Italic strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
 </w:t>
-      </w:r>
-    </w:p>
-  </w:body>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Strong em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">, </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Em strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">. Should be ok
+</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve">
+More on combinations : </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just bold. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Bold italic.</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve"> Again just bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just italic. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Italic bold.</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve"> Again just italic</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just bold. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Bold em</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve"> Again just bold</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just em. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Em bold.</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve"> Again just em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just Strong. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Strong italic. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Again just strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just italic. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Italic strong. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">Again just italic </w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just Strong. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Strong em. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Again just strong</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">,
+</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve">Just em. </w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">Em strong.</w:t>
+    </w:r>
+    <w:r>
+      <w:rPr>
+        <w:i/>
+      </w:rPr>
+      <w:t xml:space="preserve"> Again just em</w:t>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">. Should be ok
+</w:t>
+    </w:r>
+  </w:p>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -527,383 +523,381 @@ describe "XSLT to make text bold or italic" do
 </html>
     EOL
     expected_wordml = <<-EOL
-  <w:body>
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <w:tblBorders>
-          <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-          <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
-        </w:tblBorders>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Column 1</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Column 2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Column 3</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Row 1</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve">Em text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve">I text</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Row 2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Text: </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong em </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"> Strong </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Bold tag </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Bold italic</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"> More bold. </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve"> End </w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Text: </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve"> Just em </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Em strong text</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve"> More em text </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve">Italic tag </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Italic bold</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve"> More italic.</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">  End </w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Row 2</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Text: </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong em </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"> Strong </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Bold tag </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Bold italic</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve"> More bold. </w:t>
-            </w:r>
-            <w:r>
-              <w:t xml:space="preserve"> End</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Td </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Div </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong italic</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Bold Em</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-      <w:tr>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Td </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Span</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">A div</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Strong em</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Td </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">A div</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t xml:space="preserve">Span em</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-        <w:tc>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">Td </w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:t xml:space="preserve">A div</w:t>
-            </w:r>
-          </w:p>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t xml:space="preserve">Italic strong</w:t>
-            </w:r>
-          </w:p>
-        </w:tc>
-      </w:tr>
-    </w:tbl>
-  </w:body>
+  <w:tbl>
+    <w:tblPr>
+      <w:tblStyle w:val="TableGrid"/>
+      <w:tblBorders>
+        <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:bottom w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:right w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideH w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+        <w:insideV w:val="single" w:sz="6" w:space="0" w:color="auto"/>
+      </w:tblBorders>
+      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+    </w:tblPr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Column 1</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Column 2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Column 3</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Row 1</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve">Em text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve">I text</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Row 2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Text: </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong em </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> Strong </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Bold tag </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Bold italic</w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> More bold. </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve"> End </w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Text: </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve"> Just em </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Em strong text</w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve"> More em text </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve">Italic tag </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Italic bold</w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve"> More italic.</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">  End </w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Row 2</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Text: </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong em </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> Strong </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Bold tag </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Bold italic</w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> More bold. </w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve"> End</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Td </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Div </w:t>
+          </w:r>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong italic</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Bold Em</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+    <w:tr>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Td </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Span</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">A div</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Strong em</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Td </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">A div</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:t xml:space="preserve">Span em</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Td </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">A div</w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:rPr>
+              <w:i/>
+            </w:rPr>
+            <w:rPr>
+              <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve">Italic strong</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+    </w:tr>
+  </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
