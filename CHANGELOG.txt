@@ -1,6 +1,6 @@
 CHANGELOG
 
-Version (NEXT)
+Version 0.4
 * Do not render output to file, but rather to a buffer.
   This means that apps using the gem no longer needs write permissions on a filesystem.
 
