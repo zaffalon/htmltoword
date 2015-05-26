@@ -23,7 +23,7 @@ Using the default word file as template
 require 'htmltoword'
 
 my_html = '<html><head></head><body><p>Hello</p></body></html>'
-file = Htmltoword::Document.create my_html, file_name
+document = Htmltoword::Document.create(my_html)
 ```
 
 Using your custom word file as a template, where you can setup your own style for normal text, h1,h2, etc.
@@ -34,7 +34,7 @@ require 'htmltoword'
 Htmltoword.config.custom_templates_path = 'some_path'
 
 my_html = '<html><head></head><body><p>Hello</p></body></html>'
-file = Htmltoword::Document.create my_html, file_name, word_template_file_name
+document = Htmltoword::Document.create(my_html, word_template_file_name)
 ```
 
 ### With Rails

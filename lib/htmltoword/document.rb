@@ -3,20 +3,19 @@ module Htmltoword
     class << self
       include HtmltowordHelper
 
-      def create(content, file_name, template_name = nil, extras = false)
-        file_name += extension unless file_name =~ /\.docx$/
-        template_name += extension if template_name && !(template_name =~ /\.docx$/)
-        word_file = new(template_file(template_name), file_name)
-        word_file.replace_file(content, Document.doc_xml_file, extras)
-        word_file.save
+      def create(content, template_name = nil, extras = false)
+        template_name += extension if template_name && !template_name.end_with?(extension)
+        document = new(template_file(template_name))
+        document.replace_file(content, Document.doc_xml_file, extras)
+        document.generate
       end
 
-      def create_with_content(template, file_name, content, set=nil, extras = false)
-        template += extension unless template =~ /\.docx$/
-        word_file = new(template_file(template), file_name)
+      def create_with_content(template, content, set=nil, extras = false)
+        template += extension unless template.end_with?(extension)
         content = replace_values(content, set) if set
-        word_file.replace_file(content, Document.doc_xml_file, extras)
-        word_file.save
+        document = new(template_file(template))
+        document.replace_file(content, Document.doc_xml_file, extras)
+        document.generate
       end
 
       def extension
@@ -32,40 +31,28 @@ module Htmltoword
       end
     end
 
-    def initialize(template_path, file_name)
-      @file_name = file_name
+    def initialize(template_path)
       @replaceable_files = {}
       @template_path = template_path
     end
 
-    def file_name
-      @file_name
-    end
-
     #
-    # It creates missing folders if needed, creates a new zip/word file on the
-    # specified location, copies all the files from the template word document
-    # and replace the content of the ones to be replaced.
-    # It will create a tempfile and return it. The rails app using the gem
-    # should decide what to do with it.
+    # Generate a string representing the contents of a docx file.
     #
-    #
-    def save
-      Tempfile.open([file_name, Document.extension], type: 'application/zip') do |output_file|
-        Zip::File.open(@template_path) do |template_zip|
-          Zip::OutputStream.open(output_file.path) do |out|
-            template_zip.each do |entry|
-              out.put_next_entry entry.name
-              if @replaceable_files[entry.name]
-                source = entry.get_input_stream.read.sub(/(<w:body>)(.*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\3")
-                out.write(source)
-              else
-                out.write(template_zip.read(entry.name))
-              end
+    def generate
+      Zip::File.open(@template_path) do |template_zip|
+        buffer = Zip::OutputStream.write_buffer do |out|
+          template_zip.each do |entry|
+            out.put_next_entry entry.name
+            if @replaceable_files[entry.name]
+              source = entry.get_input_stream.read.sub(/(<w:body>)(.*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\3")
+              out.write(source)
+            else
+              out.write(template_zip.read(entry.name))
             end
           end
         end
-        output_file
+        buffer.string
       end
     end
 

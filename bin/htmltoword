@@ -12,8 +12,9 @@ main do |input, output|
   if options[:format] == 'markdown'
     markup = markdown2html(markup)
   end
-  temp = Htmltoword::Document.create markup, output, options[:template_name], options[:extras]
-  FileUtils.cp temp, output
+  File.open(output, "w") do |out|
+    out << Htmltoword::Document.create(markup, options[:template_name], options[:extras])
+  end
   puts "Done" if options[:verbose]
 end
 
