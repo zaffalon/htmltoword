@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+rm -f lib/htmltoword/templates/default
+unzip lib/htmltoword/templates/default.docx -d lib/htmltoword/templates/default

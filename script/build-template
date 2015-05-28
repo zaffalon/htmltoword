@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+rm -f lib/htmltoword/templates/default.docx
+cwd=$(pwd)
+cd lib/htmltoword/templates/default
+
+# Zip options:
+# r - recursive
+# l - convert LF to CR LF line endings
+# D - Don't make entries for directories
+# T - test the resulting zip
+# 9 - Moar compression
+# q - quiet
+# o - make the file as old as the latest entry
+zip -r -l -D -T -9 -q -o ../default.docx *
+
+cd $cwd
