@@ -34,8 +34,8 @@ ActionController::Renderers.add :docx do |filename, options|
   # then it will look for a template.
   content = options.delete(:content) || render_to_string(options)
 
-  doc = Htmltoword::Document.create content, file_name, word_template, extras
-  send_data File.read(doc.path), filename: file_name, type: Mime::DOCX, disposition: disposition
+  document = Htmltoword::Document.create(content, word_template, extras)
+  send_data document, filename: file_name, type: Mime::DOCX, disposition: disposition
 end
 
 if defined? ActionController::Responder
