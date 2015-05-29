@@ -2,5 +2,5 @@
 
 set -e
 
-rm -f lib/htmltoword/templates/default
-unzip lib/htmltoword/templates/default.docx -d lib/htmltoword/templates/default
+rm -f templates/default
+unzip lib/htmltoword/templates/default.docx -d templates/default

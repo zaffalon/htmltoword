@@ -2,9 +2,10 @@
 
 set -e
 
-rm -f lib/htmltoword/templates/default.docx
+path=lib/htmltoword/templates/default.docx
+rm -f $path
 cwd=$(pwd)
-cd lib/htmltoword/templates/default
+cd templates/default
 
 # Zip options:
 # r - recursive
@@ -14,6 +15,6 @@ cd lib/htmltoword/templates/default
 # 9 - Moar compression
 # q - quiet
 # o - make the file as old as the latest entry
-zip -r -l -D -T -9 -q -o ../default.docx *
+zip -r -l -D -T -9 -q -o $path *
 
 cd $cwd
