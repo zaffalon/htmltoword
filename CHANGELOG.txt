@@ -3,6 +3,12 @@ CHANGELOG
 Version 0.4
 * Do not render output to file, but rather to a buffer.
   This means that apps using the gem no longer needs write permissions on a filesystem.
+* Support of table borders using the extra xslt
+* Support of basic lists using the extra xslt
+* Use of blockquotes as a replacement for spacing usint the extra xslt
+* Add a command line interface
+* Fixes on default template metadata
+
 
 Version 0.2
 * Relocation of templates and xslt files
