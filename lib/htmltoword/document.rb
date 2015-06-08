@@ -26,6 +26,14 @@ module Htmltoword
         'word/document.xml'
       end
 
+      def numbering_xml_file
+        'word/numbering.xml'
+      end
+
+      def numbering_xslt
+        File.join(Htmltoword.config.default_xslt_path, 'numbering.xslt')
+      end
+
       def xslt_template(extras = false)
         File.join(Htmltoword.config.default_xslt_path, (extras ? 'htmltoword.xslt' : 'base.xslt'))
       end
@@ -44,9 +52,11 @@ module Htmltoword
         buffer = Zip::OutputStream.write_buffer do |out|
           template_zip.each do |entry|
             out.put_next_entry entry.name
-            if @replaceable_files[entry.name]
+            if @replaceable_files[entry.name] && entry.name == Document.doc_xml_file
               source = entry.get_input_stream.read.sub(/(<w:body>)(.*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\3")
               out.write(source)
+            elsif @replaceable_files[entry.name]
+              out.write(@replaceable_files[entry.name])
             else
               out.write(template_zip.read(entry.name))
             end
@@ -59,10 +69,17 @@ module Htmltoword
     def replace_file(html, file_name = Document.doc_xml_file, extras = false)
       html = html.presence || '<body></body>'
       source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
-      template = Document.xslt_template(extras)
-      xslt = Nokogiri::XSLT(File.open(template))
-      source = xslt.apply_to(source).gsub(/\s*xmlns:(\w+)="(.*?)\s*"/,'')
-      @replaceable_files[file_name] = source
+      transform_and_replace(source, Document.numbering_xslt, Document.numbering_xml_file)
+      transform_and_replace(source, Document.xslt_template(extras), file_name, extras)
+    end
+
+    private
+
+    def transform_and_replace source, xslt, file, remove_ns = false
+      xslt = Nokogiri::XSLT(File.open(xslt))
+      content = xslt.apply_to(source)
+      content.gsub!(/\s*xmlns:(\w+)="(.*?)\s*"/,'') if remove_ns
+      @replaceable_files[file] =  content
     end
   end
 end
