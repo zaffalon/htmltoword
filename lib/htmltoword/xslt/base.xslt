@@ -79,12 +79,32 @@
     </w:p>
   </xsl:template>
 
+  <xsl:template match="ol|ul">
+    <xsl:param name="local_level" select="0"/>
+    <xsl:param name="global_level" select="count(preceding::ol[not(ancestor::ol or ancestor::ul)]) + count(preceding::ul[not(ancestor::ol or ancestor::ul)]) + 1"/>
+    <xsl:apply-templates>
+      <xsl:with-param name="local_level" select="$local_level + 1" />
+      <xsl:with-param name="global_level" select="$global_level" />
+    </xsl:apply-templates>
+  </xsl:template>
+
   <xsl:template match="li">
+    <xsl:param name="local_level" />
+    <xsl:param name="global_level" />
     <w:p>
-      <w:r>
-        <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-      </w:r>
+      <w:pPr>
+        <w:pStyle w:val="ListParagraph"></w:pStyle>
+        <w:numPr>
+          <w:ilvl w:val="{$local_level - 1}"/>
+          <w:numId w:val="{$global_level}"/>
+        </w:numPr>
+      </w:pPr>
+      <xsl:apply-templates select="text()"/>
     </w:p>
+    <xsl:apply-templates select="./ol|./ul">
+      <xsl:with-param name="local_level" select="$local_level" />
+      <xsl:with-param name="global_level" select="$global_level" />
+    </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="span[not(ancestor::td) and (preceding-sibling::h1 or preceding-sibling::h2 or preceding-sibling::h3 or preceding-sibling::h4 or preceding-sibling::h5 or preceding-sibling::h6 or preceding-sibling::table or preceding-sibling::p or preceding-sibling::ol or preceding-sibling::ul or preceding-sibling::div or following-sibling::h1 or following-sibling::h2 or following-sibling::h3 or following-sibling::h4 or following-sibling::h5 or following-sibling::h6 or following-sibling::table or following-sibling::p or following-sibling::ol or following-sibling::ul or following-sibling::div)]
@@ -113,7 +133,7 @@
     </w:p>
   </xsl:template>
 
-  <xsl:template match="text()[not(parent::td) and (preceding-sibling::h1 or preceding-sibling::h2 or preceding-sibling::h3 or preceding-sibling::h4 or preceding-sibling::h5 or preceding-sibling::h6 or preceding-sibling::table or preceding-sibling::p or preceding-sibling::ol or preceding-sibling::ul or preceding-sibling::div or following-sibling::h1 or following-sibling::h2 or following-sibling::h3 or following-sibling::h4 or following-sibling::h5 or following-sibling::h6 or following-sibling::table or following-sibling::p or following-sibling::ol or following-sibling::ul or following-sibling::div)]">
+  <xsl:template match="text()[not(parent::li) and not(parent::td) and (preceding-sibling::h1 or preceding-sibling::h2 or preceding-sibling::h3 or preceding-sibling::h4 or preceding-sibling::h5 or preceding-sibling::h6 or preceding-sibling::table or preceding-sibling::p or preceding-sibling::ol or preceding-sibling::ul or preceding-sibling::div or following-sibling::h1 or following-sibling::h2 or following-sibling::h3 or following-sibling::h4 or following-sibling::h5 or following-sibling::h6 or following-sibling::table or following-sibling::p or following-sibling::ol or following-sibling::ul or following-sibling::div)]">
     <xsl:comment>
         In the following situation:
 
