@@ -11,6 +11,15 @@ def compare_resulting_wordml_with_expected(html, resulting_wordml, extras: false
   expect(remove_whitespace(result.to_s)).to eq(remove_whitespace(resulting_wordml))
 end
 
+def compare_numbering_xml(html, expected_xml)
+  source = Nokogiri::HTML(html.gsub(/>\s+</, "><"))
+  xslt = Nokogiri::XSLT(File.open(Htmltoword::Document.numbering_xslt))
+  result = xslt.transform(source)
+  result.xpath('//comment()').remove
+  result = remove_declaration(result.to_s)
+  expect(remove_whitespace(result.to_s)).to eq(remove_whitespace(expected_xml))
+end
+
 def compare_content_of_body?(wordml)
   wordml !~ /<?xml version/
 end
