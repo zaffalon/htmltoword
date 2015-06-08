@@ -51,7 +51,7 @@
             <xsl:when test="contains($lstyle, 'disc')">bullet,●</xsl:when>
             <xsl:when test="contains($lstyle, 'circle')">bullet,o</xsl:when>
             <xsl:when test="contains($lstyle, 'square')">bullet,■</xsl:when>
-            <xsl:otherwise>bullet,●</xsl:otherwise>
+            <xsl:otherwise>none</xsl:otherwise>
           </xsl:choose>
         </xsl:when>
         <xsl:otherwise>
