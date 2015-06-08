@@ -36,17 +36,18 @@
   <func:function name="func:list-type">
     <xsl:param name="tag_name"/>
     <xsl:param name="style"/>
+    <xsl:param name="class"/>
     <func:result>
       <xsl:choose>
-        <xsl:when test="contains($style, 'list-style-type:')">
-          <xsl:variable name="lstyle" select="substring-before(substring-after($style, 'list-style-type:'), ';')"/>
+        <xsl:when test="contains($style, 'list-style-type:') or string-length(normalize-space($class)) > 0">
+          <xsl:variable name="lstyle" select="func:substring-before-if-contains(substring-after($style, 'list-style-type:'), ';')"/>
           <xsl:choose>
-            <xsl:when test="contains($lstyle, 'lower-alpha') or contains($lstyle, 'lower-latin') or contains($lstyle, 'alfalower')">lowerLetter</xsl:when>
-            <xsl:when test="contains($lstyle, 'upper-alpha') or contains($lstyle, 'upper-latin') or contains($lstyle, 'alfaupper')">upperLetter</xsl:when>
-            <xsl:when test="contains($lstyle, 'lower-roman') or contains($lstyle, 'romanlower')">lowerRoman</xsl:when>
-            <xsl:when test="contains($lstyle, 'upper-roman') or contains($lstyle, 'romanupper')">upperRoman</xsl:when>
-            <xsl:when test="contains($lstyle, 'none') or contains($lstyle, 'manuell')">none</xsl:when>
-            <xsl:when test="contains($lstyle, 'decimal') or contains($lstyle, 'num')">decimal</xsl:when>
+            <xsl:when test="contains($lstyle, 'lower-alpha') or contains($lstyle, 'lower-latin') or contains($class, 'alfalower')">lowerLetter</xsl:when>
+            <xsl:when test="contains($lstyle, 'upper-alpha') or contains($lstyle, 'upper-latin') or contains($class, 'alfaupper')">upperLetter</xsl:when>
+            <xsl:when test="contains($lstyle, 'lower-roman') or contains($class, 'romanlower')">lowerRoman</xsl:when>
+            <xsl:when test="contains($lstyle, 'upper-roman') or contains($class, 'romanupper')">upperRoman</xsl:when>
+            <xsl:when test="contains($lstyle, 'none') or contains($class, 'manuell')">none</xsl:when>
+            <xsl:when test="contains($lstyle, 'decimal') or contains($class, 'num') or contains($class, 'token')">decimal</xsl:when>
             <xsl:when test="contains($lstyle, 'disc')">bullet,●</xsl:when>
             <xsl:when test="contains($lstyle, 'circle')">bullet,o</xsl:when>
             <xsl:when test="contains($lstyle, 'square')">bullet,■</xsl:when>
@@ -89,7 +90,7 @@
   <xsl:template match="ol|ul">
     <xsl:param name="local_level" select="0"/>
     <xsl:param name="global_level" select="count(preceding::ol[not(ancestor::ol or ancestor::ul)]) + count(preceding::ul[not(ancestor::ol or ancestor::ul)]) + 1"/>
-    <xsl:variable name="style" select="func:list-type(name(.), concat(' ', @style, ' '))"/>
+    <xsl:variable name="style" select="func:list-type(name(.), concat(' ', @style, ' '), concat(' ', @class, ' '))"/>
     <xsl:choose>
       <xsl:when test="$local_level = 0">
         <w:abstractNum w:abstractNumId="{$global_level - 1}">
@@ -103,6 +104,15 @@
             <xsl:with-param name="local_level" select="$local_level + 1" />
             <xsl:with-param name="global_level" select="$global_level" />
           </xsl:apply-templates>
+          <xsl:comment> children left... <xsl:value-of select="count(.//ol) + count(.//ul)"/></xsl:comment>
+          <xsl:if test="count(.//ol) + count(.//ul) = 0">
+            <xsl:comment> Calling autocomplete...</xsl:comment>
+            <xsl:call-template name="autocomplete">
+              <xsl:with-param name="ilvl" select="$local_level + 1"/>
+              <xsl:with-param name="style" select="$style"/>
+            </xsl:call-template>
+          </xsl:if>
+
         </w:abstractNum>
       </xsl:when>
       <xsl:otherwise>
@@ -114,6 +124,16 @@
           <xsl:with-param name="local_level" select="$local_level + 1" />
           <xsl:with-param name="global_level" select="$global_level" />
         </xsl:apply-templates>
+
+        <xsl:comment> children left... <xsl:value-of select="count(.//ol) + count(.//ul)"/></xsl:comment>
+        <xsl:if test="count(.//ol) + count(.//ul) = 0">
+          <xsl:comment> Calling autocomplete...</xsl:comment>
+          <xsl:call-template name="autocomplete">
+            <xsl:with-param name="ilvl" select="$local_level + 1"/>
+            <xsl:with-param name="style" select="$style"/>
+          </xsl:call-template>
+        </xsl:if>
+
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -144,6 +164,9 @@
           <xsl:variable name="list-symbol" select="substring-after($style, ',')"/>
           <w:lvlText w:val="{$list-symbol}"/>
         </xsl:when>
+        <xsl:when test="$style = 'none'">
+          <w:lvlText w:val=""/>
+        </xsl:when>
         <xsl:otherwise>
           <w:lvlText w:val="%{$ilvl + 1}."/>
         </xsl:otherwise>
@@ -158,6 +181,21 @@
         </w:rPr>
       </xsl:if>
     </w:lvl>
+  </xsl:template>
+
+  <xsl:template name="autocomplete">
+    <xsl:param name="ilvl"/>
+    <xsl:param name="style" />
+    <xsl:if test="$ilvl &lt; 6">
+      <xsl:call-template name="numbering_level">
+        <xsl:with-param name="ilvl" select="$ilvl"/>
+        <xsl:with-param name="style" select="$style"/>
+      </xsl:call-template>
+      <xsl:call-template name="autocomplete">
+        <xsl:with-param name="ilvl" select="$ilvl + 1"/>
+        <xsl:with-param name="style" select="$style"/>
+      </xsl:call-template>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="define-abstractNum">
