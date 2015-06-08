@@ -47,7 +47,7 @@
     </w:p>
   </xsl:template>
 
-  <xsl:template match="div[not(ancestor::td) and not(ancestor::th) and not(ancestor::p) and not(descendant::div) and not(descendant::p) and not(descendant::h1) and not(descendant::h2) and not(descendant::h3) and not(descendant::h4) and not(descendant::h5) and not(descendant::h6) and not(descendant::table) and not(descendant::li)]">
+  <xsl:template match="div[not(ancestor::li) and not(ancestor::td) and not(ancestor::th) and not(ancestor::p) and not(descendant::div) and not(descendant::p) and not(descendant::h1) and not(descendant::h2) and not(descendant::h3) and not(descendant::h4) and not(descendant::h5) and not(descendant::h6) and not(descendant::table) and not(descendant::li)]">
     <xsl:comment>Divs should create a p if nothing above them has and nothing below them will</xsl:comment>
     <w:p>
       <xsl:call-template name="text-alignment" />
@@ -72,7 +72,7 @@
     </w:p>
   </xsl:template>
 
-  <xsl:template match="p">
+  <xsl:template match="p[not(ancestor::li)]">
     <w:p>
       <xsl:call-template name="text-alignment" />
       <xsl:apply-templates />
@@ -99,7 +99,7 @@
           <w:numId w:val="{$global_level}"/>
         </w:numPr>
       </w:pPr>
-      <xsl:apply-templates select="text()"/>
+      <xsl:apply-templates select="*[not(name()='ol' or name()='ul')]|text()"/>
     </w:p>
     <xsl:apply-templates select="./ol|./ul">
       <xsl:with-param name="local_level" select="$local_level" />
