@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<w:styles xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
-          xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main"
-          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-          xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
-          xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-          xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml"
-          xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"
-          xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-          xmlns:w10="urn:schemas-microsoft-com:office:word"
-          xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-          xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"
-          xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"
-          xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
-          xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
-          xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+<w:styles xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
   <w:docDefaults>
     <w:rPrDefault>
       <w:rPr>
-        <w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"
-                  w:cstheme="minorBidi"/>
+        <w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi" w:cstheme="minorBidi"/>
         <w:sz w:val="24"/>
         <w:szCs w:val="24"/>
         <w:lang w:val="en-US" w:eastAsia="ja-JP" w:bidi="ar-SA"/>
@@ -26,8 +11,7 @@
     </w:rPrDefault>
     <w:pPrDefault/>
   </w:docDefaults>
-  <w:latentStyles w:defLockedState="0" w:defUIPriority="99" w:defSemiHidden="1" w:defUnhideWhenUsed="1" w:defQFormat="0"
-                  w:count="276">
+  <w:latentStyles w:defLockedState="0" w:defUIPriority="99" w:defSemiHidden="1" w:defUnhideWhenUsed="1" w:defQFormat="0" w:count="276">
     <w:lsdException w:name="Normal" w:semiHidden="0" w:uiPriority="0" w:unhideWhenUsed="0" w:qFormat="1"/>
     <w:lsdException w:name="heading 1" w:semiHidden="0" w:uiPriority="9" w:unhideWhenUsed="0" w:qFormat="1"/>
     <w:lsdException w:name="heading 2" w:uiPriority="9" w:qFormat="1"/>
@@ -318,8 +302,7 @@
       <w:outlineLvl w:val="5"/>
     </w:pPr>
     <w:rPr>
-      <w:rFonts w:ascii="Times New Roman" w:eastAsiaTheme="majorEastAsia" w:hAnsi="Times New Roman"
-                w:cstheme="majorBidi"/>
+      <w:rFonts w:ascii="Times New Roman" w:eastAsiaTheme="majorEastAsia" w:hAnsi="Times New Roman" w:cstheme="majorBidi"/>
       <w:i/>
       <w:iCs/>
       <w:color w:val="000000" w:themeColor="text1"/>
@@ -441,8 +424,7 @@
     <w:uiPriority w:val="9"/>
     <w:rsid w:val="00B268BF"/>
     <w:rPr>
-      <w:rFonts w:ascii="Times New Roman" w:eastAsiaTheme="majorEastAsia" w:hAnsi="Times New Roman"
-                w:cstheme="majorBidi"/>
+      <w:rFonts w:ascii="Times New Roman" w:eastAsiaTheme="majorEastAsia" w:hAnsi="Times New Roman" w:cstheme="majorBidi"/>
       <w:i/>
       <w:iCs/>
       <w:color w:val="000000" w:themeColor="text1"/>
@@ -456,8 +438,7 @@
     <w:uiPriority w:val="9"/>
     <w:rsid w:val="005C665D"/>
     <w:rPr>
-      <w:rFonts w:ascii="Times New Roman" w:eastAsiaTheme="majorEastAsia" w:hAnsi="Times New Roman"
-                w:cstheme="majorBidi"/>
+      <w:rFonts w:ascii="Times New Roman" w:eastAsiaTheme="majorEastAsia" w:hAnsi="Times New Roman" w:cstheme="majorBidi"/>
       <w:bCs/>
       <w:i/>
       <w:sz w:val="28"/>
