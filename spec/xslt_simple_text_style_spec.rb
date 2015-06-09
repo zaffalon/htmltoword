@@ -526,6 +526,7 @@ More on combinations : </w:t>
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
         <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -538,6 +539,7 @@ More on combinations : </w:t>
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -548,6 +550,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -558,6 +561,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -570,6 +574,7 @@ More on combinations : </w:t>
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -580,6 +585,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -590,6 +596,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -602,6 +609,7 @@ More on combinations : </w:t>
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -612,6 +620,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Text: </w:t>
@@ -670,6 +679,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Text: </w:t>
@@ -730,6 +740,7 @@ More on combinations : </w:t>
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -740,6 +751,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Text: </w:t>
@@ -792,6 +804,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Td </w:t>
@@ -826,6 +839,7 @@ More on combinations : </w:t>
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Td </w:t>
@@ -854,6 +868,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Td </w:t>
@@ -874,6 +889,7 @@ More on combinations : </w:t>
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Td </w:t>

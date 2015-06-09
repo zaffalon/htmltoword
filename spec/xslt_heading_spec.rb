@@ -168,6 +168,7 @@ describe "XSLT for Headings" do
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
         <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -180,6 +181,7 @@ describe "XSLT for Headings" do
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:pStyle w:val="Heading1"/>
@@ -195,6 +197,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:pStyle w:val="Heading2"/>
@@ -212,6 +215,7 @@ describe "XSLT for Headings" do
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:pStyle w:val="Heading3"/>
@@ -227,6 +231,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:pStyle w:val="Heading4"/>
@@ -244,6 +249,7 @@ describe "XSLT for Headings" do
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:pStyle w:val="Heading5"/>
@@ -259,6 +265,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:pStyle w:val="Heading6"/>
@@ -306,6 +313,7 @@ describe "XSLT for Headings" do
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
         <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -318,6 +326,7 @@ describe "XSLT for Headings" do
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -328,6 +337,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -340,6 +350,7 @@ describe "XSLT for Headings" do
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -350,6 +361,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Cell 1,2</w:t>
@@ -387,6 +399,7 @@ describe "XSLT for Headings" do
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
         <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -399,6 +412,7 @@ describe "XSLT for Headings" do
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -409,6 +423,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -421,6 +436,7 @@ describe "XSLT for Headings" do
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -431,6 +447,7 @@ describe "XSLT for Headings" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Cell 1,2</w:t>
@@ -474,6 +491,7 @@ Using table-bordered class
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
         <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -486,6 +504,7 @@ Using table-bordered class
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Hello</w:t>
@@ -493,6 +512,7 @@ Using table-bordered class
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">World</w:t>
@@ -509,6 +529,7 @@ Using table-bordered class
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
         <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -521,6 +542,7 @@ Using table-bordered class
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Hello world</w:t>
@@ -528,6 +550,7 @@ Using table-bordered class
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Part 2</w:t>
@@ -569,6 +592,7 @@ Using table-bordered class
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
         <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -581,6 +605,7 @@ Using table-bordered class
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Pre H1 </w:t>
@@ -601,6 +626,7 @@ Using table-bordered class
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Text </w:t>
@@ -629,6 +655,7 @@ Using table-bordered class
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Some content </w:t>
@@ -651,11 +678,13 @@ Using table-bordered class
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p/>
       </w:tc>
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Something </w:t>
@@ -683,6 +712,7 @@ Using table-bordered class
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:t xml:space="preserve">Text inside div</w:t>
