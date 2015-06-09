@@ -13,9 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://github.com/karnov/htmltoword"
   spec.license       = "MIT"
 
-  spec.files         = Dir.glob("{lib}/**/*.rb") + Dir.glob("**/{templates,xslt}/*") + %w{ README.md Rakefile }
+  spec.files         = Dir.glob("lib/**/*.{rb,xslt,docx}") + %w{ bin/htmltoword README.md Rakefile }
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
   spec.add_dependency "actionpack"

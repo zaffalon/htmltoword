@@ -53,7 +53,7 @@ module Htmltoword
           template_zip.each do |entry|
             out.put_next_entry entry.name
             if @replaceable_files[entry.name] && entry.name == Document.doc_xml_file
-              source = entry.get_input_stream.read.sub(/(<w:body>)(.*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\3")
+              source = entry.get_input_stream.read.sub(/(<w:body>)((.|\n)*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\4")
               out.write(source)
             elsif @replaceable_files[entry.name]
               out.write(@replaceable_files[entry.name])
