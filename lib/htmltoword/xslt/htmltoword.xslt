@@ -16,5 +16,6 @@
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
   <xsl:import href="./base.xslt"/>
-  <xsl:import href="./extras.xslt"/>
+  <!--Extra templates and customizations-->
+  <xsl:include href="./extras.xslt"/>
 </xsl:stylesheet>

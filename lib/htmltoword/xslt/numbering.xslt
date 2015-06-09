@@ -15,8 +15,8 @@
                 version="1.0"
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
-  <xsl:import href="./functions.xslt"/>
   <xsl:output method="xml" encoding="utf-8" omit-xml-declaration="yes" indent="yes" />
+  <xsl:include href="./functions.xslt"/>
 
   <func:function name="func:list-type">
     <xsl:param name="tag_name"/>
