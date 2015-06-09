@@ -104,9 +104,7 @@
             <xsl:with-param name="local_level" select="$local_level + 1" />
             <xsl:with-param name="global_level" select="$global_level" />
           </xsl:apply-templates>
-          <xsl:comment> children left... <xsl:value-of select="count(.//ol) + count(.//ul)"/></xsl:comment>
           <xsl:if test="count(.//ol) + count(.//ul) = 0">
-            <xsl:comment> Calling autocomplete...</xsl:comment>
             <xsl:call-template name="autocomplete">
               <xsl:with-param name="ilvl" select="$local_level + 1"/>
               <xsl:with-param name="style" select="$style"/>
@@ -125,9 +123,7 @@
           <xsl:with-param name="global_level" select="$global_level" />
         </xsl:apply-templates>
 
-        <xsl:comment> children left... <xsl:value-of select="count(.//ol) + count(.//ul)"/></xsl:comment>
         <xsl:if test="count(.//ol) + count(.//ul) = 0">
-          <xsl:comment> Calling autocomplete...</xsl:comment>
           <xsl:call-template name="autocomplete">
             <xsl:with-param name="ilvl" select="$local_level + 1"/>
             <xsl:with-param name="style" select="$style"/>
