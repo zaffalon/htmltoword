@@ -16,13 +16,19 @@
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
 
-  <!-- use block quotes for spacing (can be nested) -->
-  <xsl:template match="blockquote">
-    <w:p>
-      <w:pPr>
-        <w:spacing w:afterLines="200" />
-      </w:pPr>
-    </w:p>
-    <xsl:apply-templates/>
-  </xsl:template>
+  <!-- support function to return substring-before or everything -->
+  <func:function name="func:substring-before-if-contains">
+    <xsl:param name="arg"/>
+    <xsl:param name="delim"/>
+    <func:result>
+      <xsl:choose>
+        <xsl:when test="contains($arg, $delim)">
+          <xsl:value-of select="substring-before($arg, $delim)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$arg"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </func:result>
+  </func:function>
 </xsl:stylesheet>

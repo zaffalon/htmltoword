@@ -15,7 +15,9 @@
                 version="1.0"
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
+  <xsl:import href="./functions.xslt"/>
   <xsl:output method="xml" encoding="utf-8" omit-xml-declaration="yes" indent="yes" />
+  <xsl:include href="./tables.xslt"/>
 
   <xsl:template match="/">
     <xsl:apply-templates />
@@ -195,121 +197,6 @@
   </xsl:template>
 
   <xsl:template match="details" />
-
-  <xsl:template name="tableborders">
-    <xsl:variable name="border">
-      <xsl:choose>
-        <xsl:when test="contains(concat(' ', @class, ' '), ' table-bordered ')">6</xsl:when>
-        <xsl:when test="not(@border)">0</xsl:when>
-        <xsl:otherwise><xsl:value-of select="./@border * 6"/></xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="bordertype">
-      <xsl:choose>
-        <xsl:when test="$border=0">none</xsl:when>
-        <xsl:otherwise>single</xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <w:tblBorders>
-      <w:top w:val="{$bordertype}" w:sz="{$border}" w:space="0" w:color="auto"/>
-      <w:left w:val="{$bordertype}" w:sz="{$border}" w:space="0" w:color="auto"/>
-      <w:bottom w:val="{$bordertype}" w:sz="{$border}" w:space="0" w:color="auto"/>
-      <w:right w:val="{$bordertype}" w:sz="{$border}" w:space="0" w:color="auto"/>
-      <w:insideH w:val="{$bordertype}" w:sz="{$border}" w:space="0" w:color="auto"/>
-      <w:insideV w:val="{$bordertype}" w:sz="{$border}" w:space="0" w:color="auto"/>
-    </w:tblBorders>
-  </xsl:template>
-
-  <xsl:template match="table">
-    <w:tbl>
-      <w:tblPr>
-        <w:tblStyle w:val="TableGrid"/>
-        <xsl:call-template name="tableborders"/>
-        <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-      </w:tblPr>
-      <xsl:apply-templates />
-    </w:tbl>
-  </xsl:template>
-
-  <xsl:template match="tbody">
-    <xsl:apply-templates />
-  </xsl:template>
-
-  <xsl:template match="thead">
-    <xsl:choose>
-      <xsl:when test="count(./tr) = 0">
-        <w:tr><xsl:apply-templates /></w:tr>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates />
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="tr">
-    <xsl:if test="string-length(.) > 0">
-      <w:tr>
-        <xsl:apply-templates />
-      </w:tr>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template match="th">
-    <w:tc>
-      <w:p>
-        <w:r>
-          <w:rPr>
-            <w:b />
-          </w:rPr>
-          <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-        </w:r>
-      </w:p>
-    </w:tc>
-  </xsl:template>
-
-  <xsl:template match="td">
-    <w:tc>
-      <xsl:call-template name="block">
-        <xsl:with-param name="current" select="." />
-        <xsl:with-param name="class" select="@class" />
-        <xsl:with-param name="style" select="@style" />
-      </xsl:call-template>
-    </w:tc>
-  </xsl:template>
-
-  <xsl:template name="block">
-    <xsl:param name="current" />
-    <xsl:param name="class" />
-    <xsl:param name="style" />
-    <xsl:if test="count($current/*|$current/text()) = 0">
-      <w:p/>
-    </xsl:if>
-    <xsl:for-each select="$current/*|$current/text()">
-      <xsl:choose>
-        <xsl:when test="name(.) = 'table'">
-          <xsl:apply-templates select="." />
-          <w:p/>
-        </xsl:when>
-        <xsl:when test="contains('|p|h1|h2|h3|h4|h5|h6|ul|ol|', concat('|', name(.), '|'))">
-          <xsl:apply-templates select="." />
-        </xsl:when>
-        <xsl:when test="descendant::table|descendant::p|descendant::h1|descendant::h2|descendant::h3|descendant::h4|descendant::h5|descendant::h6|descendant::li">
-          <xsl:call-template name="block">
-            <xsl:with-param name="current" select="."/>
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-          <w:p>
-            <xsl:call-template name="text-alignment">
-              <xsl:with-param name="class" select="$class" />
-              <xsl:with-param name="style" select="$style" />
-            </xsl:call-template>
-            <xsl:apply-templates select="." />
-          </w:p>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:for-each>
-  </xsl:template>
 
   <xsl:template match="text()">
     <xsl:if test="string-length(.) > 0">
