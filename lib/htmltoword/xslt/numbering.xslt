@@ -15,23 +15,8 @@
                 version="1.0"
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
+  <xsl:import href="./functions.xslt"/>
   <xsl:output method="xml" encoding="utf-8" omit-xml-declaration="yes" indent="yes" />
-
-  <!-- support function to return substring-before or everything -->
-  <func:function name="func:substring-before-if-contains">
-    <xsl:param name="arg"/>
-    <xsl:param name="delim"/>
-    <func:result>
-      <xsl:choose>
-        <xsl:when test="contains($arg, $delim)">
-          <xsl:value-of select="substring-before($arg, $delim)"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$arg"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </func:result>
-  </func:function>
 
   <func:function name="func:list-type">
     <xsl:param name="tag_name"/>
@@ -110,7 +95,6 @@
               <xsl:with-param name="style" select="$style"/>
             </xsl:call-template>
           </xsl:if>
-
         </w:abstractNum>
       </xsl:when>
       <xsl:otherwise>
@@ -129,7 +113,6 @@
             <xsl:with-param name="style" select="$style"/>
           </xsl:call-template>
         </xsl:if>
-
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
