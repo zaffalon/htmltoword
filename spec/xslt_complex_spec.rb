@@ -194,494 +194,626 @@ describe 'Bigger and a bit more complex documents' do
     </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Section 1</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:b/>
-      </w:rPr>
-      <w:t xml:space="preserve">Subsection 1.1</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:b/>
+    </w:rPr>
+    <w:t xml:space="preserve">Subsection 1.1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Ipsum: # </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Ipsum: # </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">dolor: # </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">dolor: # </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">sit: # </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">sit: # </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">amet: # </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">amet: # </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">consectetur: # </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">consectetur: # </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">adipiscing: # </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">adipiscing: # </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">elit</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">elit</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">NULLAM AMET</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">NULLAM AMET</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Subsection 1.2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Subsection 1.2</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading4"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Subsection 1.2.1</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading4"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Subsection 1.2.1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam amet.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam amet.</w:t>
+  </w:r>
   </w:p>
   <w:tbl>
-    <w:tblPr>
-      <w:tblStyle w:val="TableGrid"/>
-      <w:tblBorders>
-        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-      </w:tblBorders>
-      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-    </w:tblPr>
-    <w:tr>
-      <w:tc>
-        <w:tbl>
-          <w:tblPr>
-            <w:tblStyle w:val="TableGrid"/>
-            <w:tblBorders>
-              <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-            </w:tblBorders>
-            <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-          </w:tblPr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">Lorem </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi. Quisque luctus amet. </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">Fake list</w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">(a) Lorem ipsum dolor sit amet, consectetur posuere. </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve"> </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">(b) Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.  </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve"> </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehic </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">List</w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve"> Lorem ipsum </w:t>
-                </w:r>
-              </w:p>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve"> dolor sit amet, </w:t>
-                </w:r>
-              </w:p>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve"> consectetur adipiscing elit </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-        </w:tbl>
-        <w:p/>
-      </w:tc>
-    </w:tr>
+  <w:tblPr>
+    <w:tblStyle w:val="TableGrid"/>
+    <w:tblBorders>
+      <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+    </w:tblBorders>
+    <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+  </w:tblPr>
+  <w:tr>
+    <w:tc>
+      <w:tbl>
+        <w:tblPr>
+          <w:tblStyle w:val="TableGrid"/>
+          <w:tblBorders>
+            <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+          </w:tblBorders>
+          <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+        </w:tblPr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">Lorem </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi. Quisque luctus amet. </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">Fake list</w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">(a) Lorem ipsum dolor sit amet, consectetur posuere. </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve"> </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">(b) Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.  </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve"> </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehic </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">List</w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+          <w:tc>
+            <w:p>
+              <w:pPr>
+                <w:pStyle w:val="ListParagraph"/>
+                <w:numPr>
+                  <w:ilvl w:val="0"/>
+                  <w:numId w:val="1"/>
+                </w:numPr>
+              </w:pPr>
+              <w:r>
+                <w:t xml:space="preserve"> Lorem ipsum </w:t>
+              </w:r>
+            </w:p>
+            <w:p>
+              <w:pPr>
+                <w:pStyle w:val="ListParagraph"/>
+                <w:numPr>
+                  <w:ilvl w:val="0"/>
+                  <w:numId w:val="1"/>
+                </w:numPr>
+              </w:pPr>
+              <w:r>
+                <w:t xml:space="preserve"> dolor sit amet, </w:t>
+              </w:r>
+            </w:p>
+            <w:p>
+              <w:pPr>
+                <w:pStyle w:val="ListParagraph"/>
+                <w:numPr>
+                  <w:ilvl w:val="0"/>
+                  <w:numId w:val="1"/>
+                </w:numPr>
+              </w:pPr>
+              <w:r>
+                <w:t xml:space="preserve"> consectetur adipiscing elit </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+      </w:tbl>
+      <w:p/>
+    </w:tc>
+  </w:tr>
   </w:tbl>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:b/>
-      </w:rPr>
-      <w:t xml:space="preserve">Nullam ipsum in magna</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:b/>
+    </w:rPr>
+    <w:t xml:space="preserve">Nullam ipsum in magna</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:b/>
-      </w:rPr>
-      <w:t xml:space="preserve">Consectetus adipiscing elit.</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:b/>
+    </w:rPr>
+    <w:t xml:space="preserve">Consectetus adipiscing elit.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi. Quisque luctus amet.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi. Quisque luctus amet.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(a) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="2"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(a) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(b) Lorem ipsum dolor sit amet</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="2"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(b) Lorem ipsum dolor sit amet</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="2"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Nullam in magna ut nulla efficitur scelerisque. </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Nullam in magna ut nulla efficitur scelerisque. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam ornare augue. Nullam in magna ut nulla efficitur scelerisque. Sed scelerisque, ante ac fringilla porta, mi ipsum rhoncus amet.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam ornare augue. Nullam in magna ut nulla efficitur scelerisque. Sed scelerisque, ante ac fringilla porta, mi ipsum rhoncus amet.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Praesent aliquam ornare augue. Nullam in magna ut nulla efficitur scelerisque.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Praesent aliquam ornare augue. Nullam in magna ut nulla efficitur scelerisque.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:b/>
-      </w:rPr>
-      <w:t xml:space="preserve">æåø</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:b/>
+    </w:rPr>
+    <w:t xml:space="preserve">æåø</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:b/>
-      </w:rPr>
-      <w:t xml:space="preserve">ÁÑÇ ÉÍóü</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:b/>
+    </w:rPr>
+    <w:t xml:space="preserve">ÁÑÇ ÉÍóü</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Œ Æ </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Œ Æ </w:t>
+  </w:r>
   </w:p>
   <w:p>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
   <w:r>
     <w:t xml:space="preserve">(a) Lorem ipsum dolor sit amet</w:t>
   </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(b) Lorem ipsum dolor sit amet, consectetur adipiscing elit.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(b) Lorem ipsum dolor sit amet, consectetur adipiscing elit.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam ornare augue. Nullam in magna ut nulla efficitur scelerisque. Sed scelerisque, ante ac fringilla porta, mi ipsum rhoncus amet.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam ornare augue. Nullam in magna ut nulla efficitur scelerisque. Sed scelerisque, ante ac fringilla porta, mi ipsum rhoncus amet.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(d) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa. Donec pretium, dui tincidunt vestibulum interdum, dui ex commodo turpis, eget scelerisque orci lacus id mi. Vivamus sed id.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(d) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa. Donec pretium, dui tincidunt vestibulum interdum, dui ex commodo turpis, eget scelerisque orci lacus id mi. Vivamus sed id.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(e) Vivamus sed id.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(e) Vivamus sed id.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(f) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa. Donec pretium, dui tincidunt vestibulum interdum, dui ex commodo turpis, eget scelerisque orci lacus id mi.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(f) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa. Donec pretium, dui tincidunt vestibulum interdum, dui ex commodo turpis, eget scelerisque orci lacus id mi.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">(g) Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa. Donec pretium, dui tincidunt vestibulum interdum, dui ex commodo turpis, eget scelerisque orci lacus id mi. Vivamus sed id.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="3"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">(g) Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa. Donec pretium, dui tincidunt vestibulum interdum, dui ex commodo turpis, eget scelerisque orci lacus id mi. Vivamus sed id.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet arcu augue. Quisque ultricies nec justo a blandit. Sed scelerisque turpis felis. Integer id mauris massa.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Clause</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Clause</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Låneavtal # svenska kronor daterat den # 20#</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Låneavtal # svenska kronor daterat den # 20#</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit gravida arcu, quis auctor turpis.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit gravida arcu, quis auctor turpis.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nunc suscipit gravida arcu].</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nunc suscipit gravida arcu].</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">3. Datum: #</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">3. Datum: #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">4. Lorem ipsum dolor sit amet #</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">4. Lorem ipsum dolor sit amet #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">5. Nunc suscipit:
-        </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">5. Nunc suscipit: </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet: #</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="4"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet: #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Nam volutpat: #</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="4"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Nam volutpat: #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Consectetur adipiscing elit. Nam volutpat: #</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="4"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Consectetur adipiscing elit. Nam volutpat: #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat. #</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="4"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat. #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, [consectetur]: #</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="4"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, [consectetur]: #</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">[Lorem ipsum] dolor sit amet. Nam volutpat: [ ]</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="4"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">[Lorem ipsum] dolor sit amet. Nam volutpat: [ ]</w:t>
+  </w:r>
   </w:p>
   <w:tbl>
-    <w:tblPr>
-      <w:tblStyle w:val="TableGrid"/>
-      <w:tblBorders>
-        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-      </w:tblBorders>
-      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-    </w:tblPr>
-    <w:tr>
-      <w:tc>
-        <w:tbl>
-          <w:tblPr>
-            <w:tblStyle w:val="TableGrid"/>
-            <w:tblBorders>
-              <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-              <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-            </w:tblBorders>
-            <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-          </w:tblPr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">Place/Date </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-          <w:tr>
-            <w:tc>
-              <w:p>
-                <w:r>
-                  <w:t xml:space="preserve">______________________ </w:t>
-                </w:r>
-              </w:p>
-            </w:tc>
-          </w:tr>
-        </w:tbl>
-        <w:p/>
-      </w:tc>
-    </w:tr>
+  <w:tblPr>
+    <w:tblStyle w:val="TableGrid"/>
+    <w:tblBorders>
+      <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+    </w:tblBorders>
+    <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+  </w:tblPr>
+  <w:tr>
+    <w:tc>
+      <w:tbl>
+        <w:tblPr>
+          <w:tblStyle w:val="TableGrid"/>
+          <w:tblBorders>
+            <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+          </w:tblBorders>
+          <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+        </w:tblPr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">Place/Date </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+        <w:tr>
+          <w:tc>
+            <w:p>
+              <w:r>
+                <w:t xml:space="preserve">______________________ </w:t>
+              </w:r>
+            </w:p>
+          </w:tc>
+        </w:tr>
+      </w:tbl>
+      <w:p/>
+    </w:tc>
+  </w:tr>
   </w:tbl>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
@@ -796,7 +928,7 @@ describe 'Bigger and a bit more complex documents' do
   </html>
     EOL
     expected_wordml = <<-EOL
-      <w:p>
+  <w:p>
     <w:pPr>
       <w:pStyle w:val="Heading1"/>
     </w:pPr>
@@ -805,244 +937,286 @@ describe 'Bigger and a bit more complex documents' do
     </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Indholdsfortegnelse</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Indholdsfortegnelse</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Section 1
-          (Text section)
-        </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="1"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 1</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> (Text section) </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Section 2
-          (With highlights)
-        </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="1"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 2</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> (With highlights) </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Section 3
-          (Highlight only)
-        </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="1"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 3</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> (Highlight only) </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:br w:type="page"/>
-    </w:r>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Section 1</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">§ 2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">§ 2</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading4"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum:
-                  Link 1</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading4"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum: Link 1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading4"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Excepteur sint occaecat cupidatat non proident: 2013-01-01</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading4"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Excepteur sint occaecat cupidatat non proident: 2013-01-01</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve"> Consectetur adipiscing elit
-                  </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> Consectetur adipiscing elit </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">1)sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,
-                  </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="2"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:rPr>
+      <w:i/>
+    </w:rPr>
+    <w:t xml:space="preserve">1)</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">6)quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Link. 2 Duis aute.
-                  </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="2"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:rPr>
+      <w:i/>
+    </w:rPr>
+    <w:t xml:space="preserve">6)</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Link. 2</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> Duis aute. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">
-                  Mauris felis massa, malesuada a aliquet sed, volutpat sed sapien. Sed porttitor ex in nisi commodo varius. Ut ligula enim, mollis at mi eget, elementum imperdiet augue.
-                </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> Mauris felis massa, malesuada a aliquet sed, volutpat sed sapien. Sed porttitor ex in nisi commodo varius. Ut ligula enim, mollis at mi eget, elementum imperdiet augue. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Stk. 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. Sed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget. Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae, lobortis nec dui. </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">ligningslovens § 16 H, stk. 6</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">,  Donec malesuada dictum sagittis </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Text on link 3</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve"> or </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Link 4</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">, Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Stk. 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. Sed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget. Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae, lobortis nec dui. </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">ligningslovens § 16 H, stk. 6</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">, Donec malesuada dictum sagittis </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Text on link 3</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> or </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Link 4</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">, Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Stk. 3. Pellentesque nisi tortor, fermentum nec iaculis non, efficitur eu ex. Donec volutpat felis at turpis accumsan, nec interdum sem porta. Sed sed.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Stk. 3. Pellentesque nisi tortor, fermentum nec iaculis non, efficitur eu ex. Donec volutpat felis at turpis accumsan, nec interdum sem porta. Sed sed.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Stk. 6. Quisque finibus purus urna, ac condimentum purus sollicitudin non. In egestas vel libero non pharetra. Donec malesuada dictum sagittis.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Stk. 6. Quisque finibus purus urna, ac condimentum purus sollicitudin non. In egestas vel libero non pharetra. Donec malesuada dictum sagittis.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:br w:type="page"/>
-    </w:r>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Section 2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 2</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading4"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Notes</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading4"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Notes</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">
-          My note
-          </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> My note </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">
-            ― By Cristina Matonte
-          </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> ― By Cristina Matonte </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">§ 4</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">§ 4</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading4"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum:
-                  Section 2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading4"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum: Section 2</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading4"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Datum: 2015-01-01</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading4"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Datum: 2015-01-01</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">     Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.
-                </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-
-    <w:r>
-      <w:rPr>
-        <w:highlight w:val="yellow"/>
-      </w:rPr>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus.</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">.</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:highlight w:val="yellow"/>
+    </w:rPr>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus.</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Stk. 3. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis.
-                </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Stk. 3. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:br w:type="page"/>
-    </w:r>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading3"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Section 3</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading3"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 3</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Highlights on p</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Highlights on p</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:highlight w:val="magenta"/>
-      </w:rPr>
-      <w:t xml:space="preserve">Pinky</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:highlight w:val="magenta"/>
+    </w:rPr>
+    <w:t xml:space="preserve">Pinky</w:t>
+  </w:r>
   </w:p>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
@@ -1241,434 +1415,450 @@ describe 'Bigger and a bit more complex documents' do
     </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Fake TOC</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Fake TOC</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Section 1
-          (Sec1)
-        </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="1"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 1</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> (Sec1) </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Section 2
-          (Sec2)
-        </w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="1"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 2</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> (Sec2) </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:br w:type="page"/>
-    </w:r>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading1"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Section 1</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading1"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Link</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Link</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">By Author</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">By Author</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading1"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">1. Sect</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading1"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">1. Sect</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Etiam convallis ut felis a cursus. </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">link 1 </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">and </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">28</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">, idet aktier </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Etiam convallis ut felis a cursus. </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">link 1 </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">and </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">28</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">, idet aktier </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">title 2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">title 2</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. :</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">[1]</w:t>
-    </w:r>
-  </w:p>
-  <w:tbl>
-    <w:tblPr>
-      <w:tblStyle w:val="TableGrid"/>
-      <w:tblBorders>
-        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-      </w:tblBorders>
-      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-    </w:tblPr>
-    <w:tr>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">1,1</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">1,2</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">1,3</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">=</w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve">1,4</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">1,5</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">1,6</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-    </w:tr>
-    <w:tr>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">100</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">100</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">Text</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">Lorem</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">ipsum</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">bla</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-    </w:tr>
-  </w:tbl>
-  <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. :</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">[1]</w:t>
+  </w:r>
   </w:p>
   <w:tbl>
-    <w:tblPr>
-      <w:tblStyle w:val="TableGrid"/>
-      <w:tblBorders>
-        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-        <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
-      </w:tblBorders>
-      <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-    </w:tblPr>
-    <w:tr>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">–</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">1.</w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve">Funny spans </w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve">and links</w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve">, in </w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve">,</w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve"> here </w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-    </w:tr>
-    <w:tr>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">–</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">Table list</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-    </w:tr>
-    <w:tr>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">–</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-      <w:tc>
-        <w:p>
-          <w:r>
-            <w:t xml:space="preserve">With a p and no class</w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space="preserve">*</w:t>
-          </w:r>
-        </w:p>
-      </w:tc>
-    </w:tr>
+  <w:tblPr>
+    <w:tblStyle w:val="TableGrid"/>
+    <w:tblBorders>
+      <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+    </w:tblBorders>
+    <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+  </w:tblPr>
+  <w:tr>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">1,1</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">1,2</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">1,3</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">=</w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve">1,4</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">1,5</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">1,6</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+  </w:tr>
+  <w:tr>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">100</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">100</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">Text</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">Lorem</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">ipsum</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">bla</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+  </w:tr>
   </w:tbl>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. </w:t>
+  </w:r>
+  </w:p>
+  <w:tbl>
+  <w:tblPr>
+    <w:tblStyle w:val="TableGrid"/>
+    <w:tblBorders>
+      <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      <w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+    </w:tblBorders>
+    <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
+  </w:tblPr>
+  <w:tr>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">–</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">1.</w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve">Funny spans </w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve">and links</w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve">, in </w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve">,</w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve"> here </w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+  </w:tr>
+  <w:tr>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">–</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">Table list</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+  </w:tr>
+  <w:tr>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">–</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+    <w:tc>
+      <w:p>
+        <w:r>
+          <w:t xml:space="preserve">With a p and no class</w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space="preserve">*</w:t>
+        </w:r>
+      </w:p>
+    </w:tc>
+  </w:tr>
+  </w:tbl>
+  <w:p>
+  <w:r>
+    <w:t xml:space="preserve">Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Sed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Sed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae,</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae,</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading1"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">2. Div h1</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading1"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">2. Div h1</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">lobortis nec dui. Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">lobortis nec dui. Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading1"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Noter</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading1"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Noter</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:br w:type="page"/>
-    </w:r>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
   </w:p>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading1"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Section 2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading1"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Section 2</w:t>
+  </w:r>
   </w:p>
   <w:p/>
   <w:p>
-    <w:pPr>
-      <w:pStyle w:val="Heading2"/>
-    </w:pPr>
-    <w:r>
-      <w:t xml:space="preserve">Sec 2</w:t>
-    </w:r>
+  <w:pPr>
+    <w:pStyle w:val="Heading2"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">Sec 2</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve"> • Fake item 1. Beløbet skal være indbetalt til den finansielle virksomhed</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> • Fake item 1. Beløbet skal være indbetalt til den finansielle virksomhed</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve"> • Fake item 2, long one. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. Sed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget. Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae, lobortis nec dui. Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> • Fake item 2, long one. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. Sed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget. Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae, lobortis nec dui. Aenean rutrum elementum nulla, ut consequat velit accumsan vitae. Duis iaculis nulla elit, quis rhoncus mi malesuada vel.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:rPr>
-        <w:i/>
-      </w:rPr>
-      <w:t xml:space="preserve">“… Quoted text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus.  …”.</w:t>
-    </w:r>
+  <w:r>
+    <w:rPr>
+      <w:i/>
+    </w:rPr>
+    <w:t xml:space="preserve">“… Quoted text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ut felis a cursus. …”.</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">[1]</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Jf. </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Ref 1</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve"> lorem ipsum, and </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Ref 2</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve"> Lorem ipsum dolor sit amet, consectetur adipiscing </w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:i/>
-      </w:rPr>
-      <w:t xml:space="preserve">Italics</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">: elit. Etiam convallis ut felis </w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:i/>
-      </w:rPr>
-      <w:t xml:space="preserve">a cursus</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">: Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Ref 3</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve"> ed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget. </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">[1]</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Jf. </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Ref 1</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> lorem ipsum, and </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Ref 2</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> Lorem ipsum dolor sit amet, consectetur adipiscing </w:t>
+  </w:r>
+  <w:r>
+    <w:rPr>
+      <w:i/>
+    </w:rPr>
+    <w:t xml:space="preserve">Italics</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">: elit. Etiam convallis ut felis </w:t>
+  </w:r>
+  <w:r>
+    <w:rPr>
+      <w:i/>
+    </w:rPr>
+    <w:t xml:space="preserve">a cursus</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">: Etiam sodales quis nisl ac elementum. Suspendisse egestas hendrerit diam sit amet mattis. </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Ref 3</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> ed id consectetur orci. Phasellus ultrices laoreet lectus, a laoreet magna accumsan eget. </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve">[2]</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Jf. </w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve">Ref 4</w:t>
-    </w:r>
-    <w:r>
-      <w:t xml:space="preserve"> Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae, lobortis nec dui</w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve">[2]</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Jf. </w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve">Ref 4</w:t>
+  </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> Curabitur erat mi, congue non turpis non, faucibus dapibus magna. Phasellus a accumsan tortor. Quisque quam purus, vehicula a auctor vitae, lobortis nec dui</w:t>
+  </w:r>
   </w:p>
   <w:p>
-    <w:r>
-      <w:t xml:space="preserve"> </w:t>
-    </w:r>
+  <w:r>
+    <w:t xml:space="preserve"> </w:t>
+  </w:r>
   </w:p>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)

@@ -81,44 +81,6 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="ol/li">
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="ListParagraph"/>
-        <w:numPr>
-          <w:ilvl w:val="0"/>
-          <w:numId w:val="1"/>
-        </w:numPr>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-      </w:r>
-    </w:p>
-  </xsl:template>
-
-  <xsl:template match="ul/li">
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="ListParagraph"/>
-        <w:numPr>
-          <w:ilvl w:val="0"/>
-          <w:numId w:val="10"/>
-        </w:numPr>
-      </w:pPr>
-      <w:r>
-        <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-      </w:r>
-    </w:p>
-  </xsl:template>
-
-  <xsl:template match="ol">
-    <xsl:apply-templates />
-  </xsl:template>
-
-  <xsl:template match="ul">
-    <xsl:apply-templates />
-  </xsl:template>
-
   <xsl:template name="define-border">
     <xsl:param name="class" />
     <xsl:if test="contains($class, 'ms-border-')">
