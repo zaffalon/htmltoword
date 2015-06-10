@@ -4,6 +4,7 @@ Version 0.4.2
 * Fix broken default template
 * List support
 * Support table cells bordering in the base xslt
+* br tag support
 
 Version 0.4.1
 * Include forgotten templates and xslt
