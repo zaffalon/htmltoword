@@ -19,9 +19,7 @@
   <!-- use block quotes for spacing (can be nested) -->
   <xsl:template match="blockquote">
     <w:p>
-      <w:pPr>
-        <w:spacing w:afterLines="200" />
-      </w:pPr>
+      <w:r></w:r>
     </w:p>
     <xsl:apply-templates/>
   </xsl:template>
