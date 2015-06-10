@@ -148,6 +148,7 @@ describe "XSLT to align div, p and td tags" do
   <w:tbl>
     <w:tblPr>
       <w:tblStyle w:val="TableGrid"/>
+      <w:tblW w:w="5000" w:type="pct"/>
       <w:tblBorders>
         <w:top w:val="single" w:sz="6" w:space="0" w:color="auto"/>
         <w:left w:val="single" w:sz="6" w:space="0" w:color="auto"/>
@@ -160,6 +161,7 @@ describe "XSLT to align div, p and td tags" do
     </w:tblPr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -170,6 +172,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -180,6 +183,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -190,6 +194,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:r>
             <w:rPr>
@@ -202,6 +207,7 @@ describe "XSLT to align div, p and td tags" do
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="left"/>
@@ -212,6 +218,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="right"/>
@@ -222,6 +229,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="center"/>
@@ -232,6 +240,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="both"/>
@@ -244,6 +253,7 @@ describe "XSLT to align div, p and td tags" do
     </w:tr>
     <w:tr>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="left"/>
@@ -254,6 +264,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="right"/>
@@ -264,6 +275,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="center"/>
@@ -274,6 +286,7 @@ describe "XSLT to align div, p and td tags" do
         </w:p>
       </w:tc>
       <w:tc>
+        <w:tcPr/>
         <w:p>
           <w:pPr>
             <w:jc w:val="both"/>

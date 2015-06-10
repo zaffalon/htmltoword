@@ -286,6 +286,7 @@ describe 'Bigger and a bit more complex documents' do
   <w:tbl>
   <w:tblPr>
     <w:tblStyle w:val="TableGrid"/>
+    <w:tblW w:w="5000" w:type="pct"/>
     <w:tblBorders>
       <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
       <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -298,9 +299,11 @@ describe 'Bigger and a bit more complex documents' do
   </w:tblPr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:tbl>
         <w:tblPr>
           <w:tblStyle w:val="TableGrid"/>
+          <w:tblW w:w="5000" w:type="pct"/>
           <w:tblBorders>
             <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
             <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -313,6 +316,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tblPr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">Lorem </w:t>
@@ -320,6 +324,7 @@ describe 'Bigger and a bit more complex documents' do
             </w:p>
           </w:tc>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi. Quisque luctus amet. </w:t>
@@ -329,6 +334,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">Fake list</w:t>
@@ -336,6 +342,7 @@ describe 'Bigger and a bit more complex documents' do
             </w:p>
           </w:tc>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">(a) Lorem ipsum dolor sit amet, consectetur posuere. </w:t>
@@ -345,6 +352,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve"> </w:t>
@@ -352,6 +360,7 @@ describe 'Bigger and a bit more complex documents' do
             </w:p>
           </w:tc>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">(b) Fusce volutpat nunc at nulla scelerisque vehicula. Vestibulum id enim nisi.  </w:t>
@@ -361,6 +370,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve"> </w:t>
@@ -368,6 +378,7 @@ describe 'Bigger and a bit more complex documents' do
             </w:p>
           </w:tc>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">(c) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat nunc at nulla scelerisque vehic </w:t>
@@ -377,6 +388,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">List</w:t>
@@ -384,6 +396,7 @@ describe 'Bigger and a bit more complex documents' do
             </w:p>
           </w:tc>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:pPr>
                 <w:pStyle w:val="ListParagraph"/>
@@ -767,6 +780,7 @@ describe 'Bigger and a bit more complex documents' do
   <w:tbl>
   <w:tblPr>
     <w:tblStyle w:val="TableGrid"/>
+    <w:tblW w:w="5000" w:type="pct"/>
     <w:tblBorders>
       <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
       <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -779,9 +793,11 @@ describe 'Bigger and a bit more complex documents' do
   </w:tblPr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:tbl>
         <w:tblPr>
           <w:tblStyle w:val="TableGrid"/>
+          <w:tblW w:w="5000" w:type="pct"/>
           <w:tblBorders>
             <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
             <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -794,6 +810,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tblPr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">Place/Date </w:t>
@@ -803,6 +820,7 @@ describe 'Bigger and a bit more complex documents' do
         </w:tr>
         <w:tr>
           <w:tc>
+            <w:tcPr/>
             <w:p>
               <w:r>
                 <w:t xml:space="preserve">______________________ </w:t>
@@ -1524,6 +1542,7 @@ describe 'Bigger and a bit more complex documents' do
   <w:tbl>
   <w:tblPr>
     <w:tblStyle w:val="TableGrid"/>
+    <w:tblW w:w="5000" w:type="pct"/>
     <w:tblBorders>
       <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
       <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -1536,6 +1555,7 @@ describe 'Bigger and a bit more complex documents' do
   </w:tblPr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">1,1</w:t>
@@ -1543,6 +1563,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">1,2</w:t>
@@ -1550,6 +1571,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">1,3</w:t>
@@ -1557,6 +1579,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">=</w:t>
@@ -1567,6 +1590,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">1,5</w:t>
@@ -1574,6 +1598,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">1,6</w:t>
@@ -1583,6 +1608,7 @@ describe 'Bigger and a bit more complex documents' do
   </w:tr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">100</w:t>
@@ -1590,6 +1616,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">100</w:t>
@@ -1597,6 +1624,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">Text</w:t>
@@ -1604,6 +1632,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">Lorem</w:t>
@@ -1611,6 +1640,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">ipsum</w:t>
@@ -1618,6 +1648,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">bla</w:t>
@@ -1634,6 +1665,7 @@ describe 'Bigger and a bit more complex documents' do
   <w:tbl>
   <w:tblPr>
     <w:tblStyle w:val="TableGrid"/>
+    <w:tblW w:w="5000" w:type="pct"/>
     <w:tblBorders>
       <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
       <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
@@ -1646,6 +1678,7 @@ describe 'Bigger and a bit more complex documents' do
   </w:tblPr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">–</w:t>
@@ -1653,6 +1686,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">1.</w:t>
@@ -1677,6 +1711,7 @@ describe 'Bigger and a bit more complex documents' do
   </w:tr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">–</w:t>
@@ -1684,6 +1719,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+    <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">Table list</w:t>
@@ -1693,6 +1729,7 @@ describe 'Bigger and a bit more complex documents' do
   </w:tr>
   <w:tr>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">–</w:t>
@@ -1700,6 +1737,7 @@ describe 'Bigger and a bit more complex documents' do
       </w:p>
     </w:tc>
     <w:tc>
+      <w:tcPr/>
       <w:p>
         <w:r>
           <w:t xml:space="preserve">With a p and no class</w:t>
