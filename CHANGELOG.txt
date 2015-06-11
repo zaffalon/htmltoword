@@ -1,5 +1,8 @@
 CHANGELOG
 
+Version 0.4.3
+* Add method that generates and saves the document to a file in a specific file path
+
 Version 0.4.2
 * Fix broken default template
 * List support

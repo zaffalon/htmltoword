@@ -10,6 +10,12 @@ module Htmltoword
         document.generate
       end
 
+      def create_and_save(content, file_path, template_name = nil, extras = false)
+        File.open(file_path, "w") do |out|
+          out << create(content, template_name, extras)
+        end
+      end
+
       def create_with_content(template, content, set=nil, extras = false)
         template += extension unless template.end_with?(extension)
         content = replace_values(content, set) if set

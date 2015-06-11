@@ -14,9 +14,15 @@ Or install it yourself as:
 
     $ gem install htmltoword
 
+
+** Note: ** Since version 0.4.0 the ```create``` method will return a string with the contents of the file. If you want to save the file please use ```create_and_save```. See the usage for more
+
 ## Usage
 
 ### Standalone
+
+By default, the file will be saved at the specified location. In case you want to handle the contents of the file
+as a string and do what suits you best, you can specify that when calling the create function.
 
 Using the default word file as template
 ```ruby
@@ -24,6 +30,7 @@ require 'htmltoword'
 
 my_html = '<html><head></head><body><p>Hello</p></body></html>'
 document = Htmltoword::Document.create(my_html)
+file = Htmltoword::Document.create_and_save(my_html, file_path)
 ```
 
 Using your custom word file as a template, where you can setup your own style for normal text, h1,h2, etc.
@@ -35,7 +42,11 @@ Htmltoword.config.custom_templates_path = 'some_path'
 
 my_html = '<html><head></head><body><p>Hello</p></body></html>'
 document = Htmltoword::Document.create(my_html, word_template_file_name)
+file = Htmltoword::Document.create_and_save(my_html, file_path, word_template_file_name)
 ```
+
+The ```create``` function will return a string with the file, so you can do with it what you consider best.
+The ```create_and_save``` function will create the file in the specified file_path.
 
 ### With Rails
 **For htmltoword version >= 0.2**
