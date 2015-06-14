@@ -164,7 +164,6 @@
       <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Times New Roman"/>
       <w:sz w:val="18"/>
       <w:szCs w:val="20"/>
-      <w:lang w:val="da-DK" w:eastAsia="da-DK"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="Heading1">
@@ -414,7 +413,6 @@
       <w:caps/>
       <w:sz w:val="28"/>
       <w:szCs w:val="28"/>
-      <w:lang w:val="da-DK"/>
     </w:rPr>
   </w:style>
   <w:style w:type="character" w:customStyle="1" w:styleId="Heading6Char">
@@ -458,7 +456,6 @@
       <w:caps/>
       <w:sz w:val="18"/>
       <w:szCs w:val="18"/>
-      <w:lang w:val="da-DK"/>
     </w:rPr>
   </w:style>
   <w:style w:type="character" w:customStyle="1" w:styleId="Heading3Char">
@@ -474,7 +471,6 @@
       <w:caps/>
       <w:sz w:val="18"/>
       <w:szCs w:val="18"/>
-      <w:lang w:val="da-DK"/>
     </w:rPr>
   </w:style>
   <w:style w:type="character" w:customStyle="1" w:styleId="Heading2Char">
@@ -490,7 +486,6 @@
       <w:caps/>
       <w:sz w:val="20"/>
       <w:szCs w:val="20"/>
-      <w:lang w:val="da-DK"/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:styleId="ListParagraph">
