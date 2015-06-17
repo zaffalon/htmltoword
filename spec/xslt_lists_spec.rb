@@ -675,4 +675,7 @@ describe "XSLT supporting lists" do
     compare_numbering_xml(html, expected_numbering_xml)
   end
 
+  it 'handles inline elements inside a div' do
+    compare_transformed_files('lists_inline_elements', extras: false)
+  end
 end
