@@ -49,11 +49,19 @@
     </w:p>
   </xsl:template>
 
-  <xsl:template match="br[not(ancestor::p) and not(ancestor::div) and not(name(..)='td') and not(name(..)='li') or preceding-sibling::div or following-sibling::div
-                        or preceding-sibling::p or following-sibling::p]">
+
+  <xsl:template match="br[not(ancestor::p) and not(ancestor::div) and not(name(..)='td') and not(name(..)='li') or
+                          (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
     <w:p>
       <w:r></w:r>
     </w:p>
+  </xsl:template>
+
+  <xsl:template match="br[(name(..)='li' or name(..)='td') and
+                          (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
+    <w:r>
+      <w:br />
+    </w:r>
   </xsl:template>
 
   <xsl:template match="br">
