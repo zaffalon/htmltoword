@@ -164,6 +164,10 @@ describe "XSLT to align div, p and td tags" do
       <li>Text <br> new line</li>
       <li><div>Text inside div <br> new line</div></li>
       <li><p>Text inside p <br> new line</p></li>
+      <li>Some text
+        <br>
+        <div>Text in div</div>
+      </li>
     </ol>
   </body>
   </html>
@@ -223,6 +227,24 @@ describe "XSLT to align div, p and td tags" do
       <w:t xml:space="preserve"> new line</w:t>
     </w:r>
   </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="ListParagraph"/>
+      <w:numPr>
+        <w:ilvl w:val="0"/>
+        <w:numId w:val="1"/>
+      </w:numPr>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve">Some text </w:t>
+    </w:r>
+    <w:r>
+      <w:br/>
+    </w:r>
+    <w:r>
+      <w:t xml:space="preserve">Text in div</w:t>
+    </w:r>
+  </w:p>
     EOL
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
@@ -244,6 +266,10 @@ describe "XSLT to align div, p and td tags" do
               <li><div>Text inside div <br> new line</div></li>
               <li><p>Text inside p <br> new line</p></li>
             </ul>
+          </td>
+          <td>Some text
+            <br>
+            <p>Text inside p</p>
           </td>
         </tr>
       </tbody>
@@ -353,6 +379,24 @@ describe "XSLT to align div, p and td tags" do
           </w:r>
           <w:r>
             <w:t xml:space="preserve"> new line</w:t>
+          </w:r>
+        </w:p>
+      </w:tc>
+      <w:tc>
+        <w:tcPr/>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Some text </w:t>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:br/>
+          </w:r>
+        </w:p>
+        <w:p>
+          <w:r>
+            <w:t xml:space="preserve">Text inside p</w:t>
           </w:r>
         </w:p>
       </w:tc>
