@@ -2,7 +2,8 @@ CHANGELOG
 
 Version 0.4.4
 * Update default template to remove language
-* Bug fix on lists and tables having br elements
+* Bug fixes on lists and tables having br elements
+* Bug fixes on lists having inline elements and div or p tags
 
 Version 0.4.3
 * Add method that generates and saves the document to a file in a specific file path
