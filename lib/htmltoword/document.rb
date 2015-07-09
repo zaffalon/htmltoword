@@ -11,7 +11,7 @@ module Htmltoword
       end
 
       def create_and_save(content, file_path, template_name = nil, extras = false)
-        File.open(file_path, "w") do |out|
+        File.open(file_path, "wb") do |out|
           out << create(content, template_name, extras)
         end
       end
