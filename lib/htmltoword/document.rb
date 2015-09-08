@@ -36,8 +36,16 @@ module Htmltoword
         'word/numbering.xml'
       end
 
+      def relations_xml_file
+        'word/_rels/document.xml.rels'
+      end
+
       def numbering_xslt
         File.join(Htmltoword.config.default_xslt_path, 'numbering.xslt')
+      end
+
+      def relations_xslt
+        File.join(Htmltoword.config.default_xslt_path, 'relations.xslt')
       end
 
       def xslt_template(extras = false)
@@ -76,6 +84,7 @@ module Htmltoword
       html = html.presence || '<body></body>'
       source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
       transform_and_replace(source, Document.numbering_xslt, Document.numbering_xml_file)
+      transform_and_replace(source, Document.relations_xslt, Document.relations_xml_file)
       transform_and_replace(source, Document.xslt_template(extras), file_name, extras)
     end
 
