@@ -35,4 +35,10 @@ describe "XSLT" do
     html = '<html><head></head><body><div><p>Hello</p><details><summary>Title</summary><p>Second</p><details></div></body></html>'
     compare_resulting_wordml_with_expected(html, "<w:p> <w:r> <w:t xml:space=\"preserve\">Hello</w:t> </w:r> </w:p>")
   end
+
+  it "Should transform a pre" do
+     html = '<pre>Lorem ipsum </pre><pre><b>Boldie...</b> Not boldie</pre><div><div><pre>dolor sit amet <i>Italic</i></pre> <div>consectetur </div></div>adipiscing <pre>elit <a href="/linkto">link </a></pre></div><div><h1>Title</h1><pre>Pre 1</pre><pre>Pre 2</pre><pre>Pre 3</pre></div>'
+     expected = '<w:p> <w:r> <w:t xml:space="preserve">Lorem ipsum </w:t> </w:r> </w:p> <w:p> <w:r> <w:rPr> <w:b/> </w:rPr> <w:t xml:space="preserve">Boldie...</w:t> </w:r> <w:r> <w:t xml:space="preserve"> Not boldie</w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">dolor sit amet </w:t> </w:r> <w:r> <w:rPr> <w:i/> </w:rPr> <w:t xml:space="preserve">Italic</w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">consectetur </w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">adipiscing </w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">elit </w:t> </w:r> <w:r> <w:t xml:space="preserve">link </w:t> </w:r> </w:p> <w:p> <w:pPr> <w:pStyle w:val="Heading1"/> </w:pPr> <w:r> <w:t xml:space="preserve">Title</w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">Pre 1</w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">Pre 2</w:t> </w:r> </w:p> <w:p> <w:r> <w:t xml:space="preserve">Pre 3</w:t> </w:r> </w:p>'
+     compare_resulting_wordml_with_expected(html, expected)
+  end
 end

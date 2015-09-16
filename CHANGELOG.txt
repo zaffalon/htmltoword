@@ -4,6 +4,8 @@ Version 0.4.4
 * Update default template to remove language
 * Bug fixes on lists and tables having br elements
 * Bug fixes on lists having inline elements and div or p tags
+* Bug fix on corrupted docx files generated in Windows
+* Add basic support to 'pre' tag
 
 Version 0.4.3
 * Add method that generates and saves the document to a file in a specific file path
