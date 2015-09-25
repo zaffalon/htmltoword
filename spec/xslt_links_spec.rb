@@ -8,11 +8,15 @@ describe "XSLT for Links" do
   <html>
   <head></head>
   <body>
+    <a href="/internal">This is internal link.</a>
     <div>
       <a href="http://somelink.com">Link text.</a>
     </div>
     <div>
       <a href="https://someotherlink.com">Other link text.</a>
+    </div>
+    <div>
+      <a href="/internal2">This is other internal link.</a>
     </div>
     <div>
       <a href="http://someotherlink2.com">Other link text 2.</a>
@@ -28,6 +32,11 @@ describe "XSLT for Links" do
   </html>
     EOL
     expected_wordml = <<-EOL
+  <w:p>
+    <w:r>
+      <w:t xml:space=\"preserve\">This is internal link.</w:t>
+    </w:r>
+  </w:p>
   <w:p>
     <w:hyperlink r:id="rId8">
       <w:r>
@@ -51,6 +60,11 @@ describe "XSLT for Links" do
         <w:t xml:space="preserve">Other link text.</w:t>
       </w:r>
     </w:hyperlink>
+  </w:p>
+  <w:p>
+    <w:r>
+      <w:t xml:space=\"preserve\">This is other internal link.</w:t>
+    </w:r>
   </w:p>
   <w:p>
     <w:hyperlink r:id=\"rId10\">

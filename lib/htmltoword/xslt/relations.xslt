@@ -5,7 +5,7 @@
 
   <xsl:template match="a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]" priority="1">
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="{@href}" TargetMode="External">
-      <xsl:attribute name="Id">rId<xsl:value-of select="count(preceding::a) + 8"/></xsl:attribute>
+      <xsl:attribute name="Id">rId<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]) + 8"/></xsl:attribute>
     </Relationship>
   </xsl:template>
 

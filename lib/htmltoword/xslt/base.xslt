@@ -154,7 +154,7 @@
       </xsl:comment>
     <w:p>
       <xsl:choose>
-        <xsl:when test="self::a">
+        <xsl:when test="self::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]">
           <xsl:call-template name="link" />
         </xsl:when>
         <xsl:otherwise>

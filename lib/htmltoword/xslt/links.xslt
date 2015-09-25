@@ -19,7 +19,7 @@
 
   <xsl:template match="a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]" name="link">
     <w:hyperlink>
-      <xsl:attribute name="r:id">rId<xsl:value-of select="count(preceding::a) + 8" /></xsl:attribute>
+      <xsl:attribute name="r:id">rId<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]) + 8" /></xsl:attribute>
       <w:r>
         <w:rPr>
           <w:rStyle w:val="Hyperlink"/>
