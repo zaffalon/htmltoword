@@ -11,11 +11,11 @@
   </xsl:template>
 
   <!-- get first inline element of a sequence or text having block element siblings... -->
-  <xsl:template match="node()[self::a|self::b|self::em|self::i|self::small|self::span|self::strong|self::u|self::text()][../div]">
+  <xsl:template match="node()[self::a|self::b|self::em|self::i|self::small|self::span|self::strong|self::u|self::text()][parent::div|parent::li]">
     <div>
       <xsl:call-template name="inlineElement"/>
     </div>
-    <xsl:apply-templates select="following-sibling::node()[not((self::a|self::b|self::em|self::i|self::small|self::span|self::strong|self::u|self::text())[../div])][1]"/>
+    <xsl:apply-templates select="following-sibling::node()[not((self::a|self::b|self::em|self::i|self::small|self::span|self::strong|self::u|self::text())[parent::div|parent::li])][1]"/>
   </xsl:template>
 
   <!-- get following inline elements... -->
