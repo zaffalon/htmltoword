@@ -149,7 +149,7 @@
                     <w:ilvl w:val="0"/>
                     <w:numId w:val="0"/>
                   </w:numPr>
-                  <w:ind w:left="{720 * ($ilvl + 2)}" w:hanging="720"/>
+                  <w:ind w:left="{720 * ($ilvl + 1)}"/>
                 </w:pPr>
                 <xsl:apply-templates/>
               </w:p>
