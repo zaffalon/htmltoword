@@ -99,9 +99,11 @@ describe "XSLT to align div, p and td tags" do
     <w:r>
       <w:t xml:space="preserve"> Lorem ipsum 4 </w:t>
     </w:r>
-    <w:r>
-      <w:br/>
-    </w:r>
+  </w:p>
+  <w:p>
+    <w:r/>
+  </w:p>
+  <w:p>
     <w:r>
       <w:t xml:space="preserve"> Lorem ipsum 5 </w:t>
     </w:r>
@@ -110,9 +112,11 @@ describe "XSLT to align div, p and td tags" do
     <w:r>
       <w:t xml:space="preserve"> Lorem ipsum 6 </w:t>
     </w:r>
-    <w:r>
-      <w:br/>
-    </w:r>
+  </w:p>
+  <w:p>
+    <w:r/>
+  </w:p>
+  <w:p>
     <w:r>
       <w:t xml:space="preserve"> Lorem ipsum 7 </w:t>
     </w:r>
@@ -184,9 +188,26 @@ describe "XSLT to align div, p and td tags" do
     <w:r>
       <w:t xml:space="preserve">Text </w:t>
     </w:r>
-    <w:r>
-      <w:br/>
-    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="ListParagraph"/>
+      <w:numPr>
+        <w:ilvl w:val="0"/>
+        <w:numId w:val="0"/>
+      </w:numPr>
+    </w:pPr>
+    <w:r/>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="ListParagraph"/>
+      <w:numPr>
+        <w:ilvl w:val="0"/>
+        <w:numId w:val="0"/>
+      </w:numPr>
+      <w:ind w:left="1440" w:hanging="720"/>
+    </w:pPr>
     <w:r>
       <w:t xml:space="preserve"> new line</w:t>
     </w:r>
@@ -238,9 +259,26 @@ describe "XSLT to align div, p and td tags" do
     <w:r>
       <w:t xml:space="preserve">Some text </w:t>
     </w:r>
-    <w:r>
-      <w:br/>
-    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="ListParagraph"/>
+      <w:numPr>
+        <w:ilvl w:val="0"/>
+        <w:numId w:val="0"/>
+      </w:numPr>
+    </w:pPr>
+    <w:r/>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:pStyle w:val="ListParagraph"/>
+      <w:numPr>
+        <w:ilvl w:val="0"/>
+        <w:numId w:val="0"/>
+      </w:numPr>
+      <w:ind w:left="1440" w:hanging="720"/>
+    </w:pPr>
     <w:r>
       <w:t xml:space="preserve">Text in div</w:t>
     </w:r>
@@ -338,9 +376,26 @@ describe "XSLT to align div, p and td tags" do
           <w:r>
             <w:t xml:space="preserve">Text </w:t>
           </w:r>
-          <w:r>
-            <w:br/>
-          </w:r>
+        </w:p>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="ListParagraph"/>
+            <w:numPr>
+              <w:ilvl w:val="0"/>
+              <w:numId w:val="0"/>
+            </w:numPr>
+          </w:pPr>
+          <w:r/>
+        </w:p>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="ListParagraph"/>
+            <w:numPr>
+              <w:ilvl w:val="0"/>
+              <w:numId w:val="0"/>
+            </w:numPr>
+            <w:ind w:left="1440" w:hanging="720"/>
+          </w:pPr>
           <w:r>
             <w:t xml:space="preserve"> new line</w:t>
           </w:r>
