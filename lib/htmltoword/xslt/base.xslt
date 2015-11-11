@@ -18,6 +18,7 @@
   <xsl:output method="xml" encoding="utf-8" omit-xml-declaration="yes" indent="yes" />
   <xsl:include href="./functions.xslt"/>
   <xsl:include href="./tables.xslt"/>
+  <xsl:include href="./links.xslt"/>
 
   <xsl:template match="/">
     <xsl:apply-templates />
@@ -158,7 +159,14 @@
         The div template will not create a w:p because the div contains a h2. Therefore we need to wrap the inline elements span|a|small in a p here.
       </xsl:comment>
     <w:p>
-      <xsl:apply-templates />
+      <xsl:choose>
+        <xsl:when test="self::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]">
+          <xsl:call-template name="link" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates />
+        </xsl:otherwise>
+      </xsl:choose>
     </w:p>
   </xsl:template>
 
