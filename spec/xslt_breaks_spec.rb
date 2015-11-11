@@ -206,7 +206,7 @@ describe "XSLT to align div, p and td tags" do
         <w:ilvl w:val="0"/>
         <w:numId w:val="0"/>
       </w:numPr>
-      <w:ind w:left="1440" w:hanging="720"/>
+      <w:ind w:left="720"/>
     </w:pPr>
     <w:r>
       <w:t xml:space="preserve"> new line</w:t>
@@ -277,7 +277,7 @@ describe "XSLT to align div, p and td tags" do
         <w:ilvl w:val="0"/>
         <w:numId w:val="0"/>
       </w:numPr>
-      <w:ind w:left="1440" w:hanging="720"/>
+      <w:ind w:left="720"/>
     </w:pPr>
     <w:r>
       <w:t xml:space="preserve">Text in div</w:t>
@@ -394,7 +394,7 @@ describe "XSLT to align div, p and td tags" do
               <w:ilvl w:val="0"/>
               <w:numId w:val="0"/>
             </w:numPr>
-            <w:ind w:left="1440" w:hanging="720"/>
+            <w:ind w:left="720"/>
           </w:pPr>
           <w:r>
             <w:t xml:space="preserve"> new line</w:t>

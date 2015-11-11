@@ -33,7 +33,7 @@
       <w:ilvl w:val="0"/>
       <w:numId w:val="0"/>
     </w:numPr>
-    <w:ind w:left="1440" w:hanging="720"/>
+    <w:ind w:left="720"/>
   </w:pPr>
   <w:r>
     <w:t xml:space="preserve">Text in a new line in div</w:t>
@@ -74,7 +74,7 @@
     <w:ilvl w:val="0"/>
     <w:numId w:val="0"/>
   </w:numPr>
-  <w:ind w:left="1440" w:hanging="720"/>
+  <w:ind w:left="720"/>
 </w:pPr>
 <w:r>
   <w:t xml:space="preserve">Text in a new line in div</w:t>
@@ -136,7 +136,7 @@
     <w:ilvl w:val="0"/>
     <w:numId w:val="0"/>
   </w:numPr>
-  <w:ind w:left="1440" w:hanging="720"/>
+  <w:ind w:left="720"/>
 </w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
@@ -180,7 +180,7 @@
     <w:ilvl w:val="0"/>
     <w:numId w:val="0"/>
   </w:numPr>
-  <w:ind w:left="1440" w:hanging="720"/>
+  <w:ind w:left="720"/>
 </w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
@@ -224,7 +224,7 @@
     <w:ilvl w:val="0"/>
     <w:numId w:val="0"/>
   </w:numPr>
-  <w:ind w:left="1440" w:hanging="720"/>
+  <w:ind w:left="720"/>
 </w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
@@ -268,7 +268,7 @@
     <w:ilvl w:val="0"/>
     <w:numId w:val="0"/>
   </w:numPr>
-  <w:ind w:left="1440" w:hanging="720"/>
+  <w:ind w:left="720"/>
 </w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
@@ -312,7 +312,7 @@
     <w:ilvl w:val="0"/>
     <w:numId w:val="0"/>
   </w:numPr>
-  <w:ind w:left="1440" w:hanging="720"/>
+  <w:ind w:left="720"/>
 </w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
