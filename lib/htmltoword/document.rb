@@ -85,7 +85,8 @@ module Htmltoword
       source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
       transform_and_replace(source, Document.numbering_xslt, Document.numbering_xml_file)
       transform_and_replace(source, Document.relations_xslt, Document.relations_xml_file)
-      transform_and_replace(source, Document.xslt_template(extras), file_name, extras)
+      cleaned_source = Nokogiri::XSLT(File.open(File.join(Htmltoword.config.default_xslt_path, 'inline_elements.xslt'))).transform(source)
+      transform_and_replace(cleaned_source, Document.xslt_template(extras), file_name, extras)
     end
 
     private

@@ -625,8 +625,6 @@ More on combinations : </w:t>
           <w:r>
             <w:t xml:space="preserve">Text: </w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:rPr>
               <w:b/>
@@ -648,8 +646,6 @@ More on combinations : </w:t>
             </w:rPr>
             <w:t xml:space="preserve"> Strong </w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:rPr>
               <w:b/>
@@ -671,8 +667,6 @@ More on combinations : </w:t>
             </w:rPr>
             <w:t xml:space="preserve"> More bold. </w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:t xml:space="preserve"> End </w:t>
           </w:r>
@@ -684,8 +678,6 @@ More on combinations : </w:t>
           <w:r>
             <w:t xml:space="preserve">Text: </w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:rPr>
               <w:i/>
@@ -707,8 +699,6 @@ More on combinations : </w:t>
             </w:rPr>
             <w:t xml:space="preserve"> More em text </w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:rPr>
               <w:i/>
@@ -730,8 +720,6 @@ More on combinations : </w:t>
             </w:rPr>
             <w:t xml:space="preserve"> More italic.</w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:t xml:space="preserve">  End </w:t>
           </w:r>
@@ -844,8 +832,6 @@ More on combinations : </w:t>
           <w:r>
             <w:t xml:space="preserve">Td </w:t>
           </w:r>
-        </w:p>
-        <w:p>
           <w:r>
             <w:t xml:space="preserve">Span</w:t>
           </w:r>

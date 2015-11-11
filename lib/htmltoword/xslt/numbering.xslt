@@ -72,26 +72,22 @@
     </w:numbering>
   </xsl:template>
 
-  <xsl:template match="ol|ul">
-    <xsl:param name="local_level" select="0"/>
-    <xsl:param name="global_level" select="count(preceding::ol[not(ancestor::ol or ancestor::ul)]) + count(preceding::ul[not(ancestor::ol or ancestor::ul)]) + 1"/>
+  <xsl:template name="container" match="ol|ul">
+    <xsl:variable name="global_level" select="count(preceding::ol[not(ancestor::ol or ancestor::ul)]) + count(preceding::ul[not(ancestor::ol or ancestor::ul)]) + 1"/>
     <xsl:variable name="style" select="func:list-type(name(.), concat(' ', @style, ' '), concat(' ', @class, ' '))"/>
     <xsl:choose>
-      <xsl:when test="$local_level = 0">
+      <xsl:when test="not(ancestor::ol or ancestor::ul)">
         <w:abstractNum w:abstractNumId="{$global_level - 1}">
           <w:nsid w:val="{concat('099A08C', $global_level)}"/>
           <w:multiLevelType w:val="hybridMultilevel"/>
           <xsl:call-template name="numbering_level">
-            <xsl:with-param name="ilvl" select="$local_level"/>
+            <xsl:with-param name="ilvl" select="0"/>
             <xsl:with-param name="style" select="$style"/>
           </xsl:call-template>
-          <xsl:apply-templates>
-            <xsl:with-param name="local_level" select="$local_level + 1" />
-            <xsl:with-param name="global_level" select="$global_level" />
-          </xsl:apply-templates>
-          <xsl:if test="count(.//ol) + count(.//ul) = 0">
+          <xsl:call-template name="item"/>
+          <xsl:if test="count(.//ol|.//ul) &lt; 6">
             <xsl:call-template name="autocomplete">
-              <xsl:with-param name="ilvl" select="$local_level + 1"/>
+              <xsl:with-param name="ilvl" select="count(.//ol) + count(.//ul)"/>
               <xsl:with-param name="style" select="$style"/>
             </xsl:call-template>
           </xsl:if>
@@ -99,31 +95,25 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:call-template name="numbering_level">
-          <xsl:with-param name="ilvl" select="$local_level"/>
+          <xsl:with-param name="ilvl" select="count(ancestor::ol) + count(ancestor::ul)"/>
           <xsl:with-param name="style" select="$style"/>
         </xsl:call-template>
-        <xsl:apply-templates>
-          <xsl:with-param name="local_level" select="$local_level + 1" />
-          <xsl:with-param name="global_level" select="$global_level" />
-        </xsl:apply-templates>
-
-        <xsl:if test="count(.//ol) + count(.//ul) = 0">
-          <xsl:call-template name="autocomplete">
-            <xsl:with-param name="ilvl" select="$local_level + 1"/>
-            <xsl:with-param name="style" select="$style"/>
-          </xsl:call-template>
-        </xsl:if>
+        <xsl:call-template name="item"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="li">
-    <xsl:param name="local_level" />
-    <xsl:param name="global_level" />
-    <xsl:apply-templates select="./ol|./ul">
-      <xsl:with-param name="local_level" select="$local_level" />
-      <xsl:with-param name="global_level" select="$global_level" />
-    </xsl:apply-templates>
+  <xsl:template name="item">
+    <xsl:for-each select="node()">
+      <xsl:choose>
+        <xsl:when test="self::ol|self::ul">
+          <xsl:call-template name="container"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:call-template name="item"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="*">
@@ -165,13 +155,19 @@
   <xsl:template name="autocomplete">
     <xsl:param name="ilvl"/>
     <xsl:param name="style" />
-    <xsl:if test="$ilvl &lt; 6">
+    <xsl:variable name="current_level">
+      <xsl:choose>
+        <xsl:when test="$ilvl &lt; 1">1</xsl:when>
+        <xsl:otherwise><xsl:value-of select="$ilvl"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$current_level &lt; 6">
       <xsl:call-template name="numbering_level">
-        <xsl:with-param name="ilvl" select="$ilvl"/>
+        <xsl:with-param name="ilvl" select="$current_level"/>
         <xsl:with-param name="style" select="$style"/>
       </xsl:call-template>
       <xsl:call-template name="autocomplete">
-        <xsl:with-param name="ilvl" select="$ilvl + 1"/>
+        <xsl:with-param name="ilvl" select="$current_level + 1"/>
         <xsl:with-param name="style" select="$style"/>
       </xsl:call-template>
     </xsl:if>
@@ -190,5 +186,4 @@
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
-
 </xsl:stylesheet>

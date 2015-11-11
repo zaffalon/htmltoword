@@ -15,9 +15,26 @@
   <w:r>
     <w:t xml:space="preserve"> and some more text </w:t>
   </w:r>
-  <w:r>
-    <w:br/>
-  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="0"/>
+    </w:numPr>
+  </w:pPr>
+  <w:r/>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="ListParagraph"/>
+    <w:numPr>
+      <w:ilvl w:val="0"/>
+      <w:numId w:val="0"/>
+    </w:numPr>
+    <w:ind w:left="720"/>
+  </w:pPr>
   <w:r>
     <w:t xml:space="preserve">Text in a new line in div</w:t>
   </w:r>
@@ -39,9 +56,26 @@
 <w:r>
   <w:t xml:space="preserve">) and some more text </w:t>
 </w:r>
-<w:r>
-  <w:br/>
-</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+</w:pPr>
+<w:r/>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+  <w:ind w:left="720"/>
+</w:pPr>
 <w:r>
   <w:t xml:space="preserve">Text in a new line in div</w:t>
 </w:r>
@@ -84,9 +118,26 @@
 <w:r>
   <w:t xml:space="preserve"> and again normal </w:t>
 </w:r>
-<w:r>
-  <w:br/>
-</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+</w:pPr>
+<w:r/>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+  <w:ind w:left="720"/>
+</w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
 </w:r>
@@ -111,9 +162,26 @@
 <w:r>
   <w:t xml:space="preserve"> and normal text </w:t>
 </w:r>
-<w:r>
-  <w:br/>
-</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+</w:pPr>
+<w:r/>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+  <w:ind w:left="720"/>
+</w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
 </w:r>
@@ -138,9 +206,26 @@
 <w:r>
   <w:t xml:space="preserve"> and normal text </w:t>
 </w:r>
-<w:r>
-  <w:br/>
-</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+</w:pPr>
+<w:r/>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+  <w:ind w:left="720"/>
+</w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
 </w:r>
@@ -165,9 +250,26 @@
 <w:r>
   <w:t xml:space="preserve"> and normal text </w:t>
 </w:r>
-<w:r>
-  <w:br/>
-</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+</w:pPr>
+<w:r/>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+  <w:ind w:left="720"/>
+</w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
 </w:r>
@@ -192,9 +294,26 @@
 <w:r>
   <w:t xml:space="preserve"> and normal text </w:t>
 </w:r>
-<w:r>
-  <w:br/>
-</w:r>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+</w:pPr>
+<w:r/>
+</w:p>
+<w:p>
+<w:pPr>
+  <w:pStyle w:val="ListParagraph"/>
+  <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+  </w:numPr>
+  <w:ind w:left="720"/>
+</w:pPr>
 <w:r>
   <w:t xml:space="preserve">New paragraph</w:t>
 </w:r>

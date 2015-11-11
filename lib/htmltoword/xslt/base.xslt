@@ -51,14 +51,14 @@
   </xsl:template>
 
 
-  <xsl:template match="br[not(ancestor::p) and not(ancestor::div) and not(name(..)='td') and not(name(..)='li') or
+  <xsl:template match="br[not(ancestor::p) and not(ancestor::div) and not(ancestor::td|ancestor::li) or
                           (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
     <w:p>
       <w:r></w:r>
     </w:p>
   </xsl:template>
 
-  <xsl:template match="br[(name(..)='li' or name(..)='td') and
+  <xsl:template match="br[(ancestor::li or ancestor::td) and
                           (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
     <w:r>
       <w:br />
@@ -110,31 +110,72 @@
   </xsl:template>
 
   <xsl:template match="ol|ul">
-    <xsl:param name="local_level" select="0"/>
     <xsl:param name="global_level" select="count(preceding::ol[not(ancestor::ol or ancestor::ul)]) + count(preceding::ul[not(ancestor::ol or ancestor::ul)]) + 1"/>
     <xsl:apply-templates>
-      <xsl:with-param name="local_level" select="$local_level + 1" />
       <xsl:with-param name="global_level" select="$global_level" />
     </xsl:apply-templates>
   </xsl:template>
 
-  <xsl:template match="li">
-    <xsl:param name="local_level" />
+  <xsl:template name="listItem" match="li">
     <xsl:param name="global_level" />
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="ListParagraph"></w:pStyle>
-        <w:numPr>
-          <w:ilvl w:val="{$local_level - 1}"/>
-          <w:numId w:val="{$global_level}"/>
-        </w:numPr>
-      </w:pPr>
-      <xsl:apply-templates select="*[not(name()='ol' or name()='ul')]|text()"/>
-    </w:p>
-    <xsl:apply-templates select="./ol|./ul">
-      <xsl:with-param name="local_level" select="$local_level" />
-      <xsl:with-param name="global_level" select="$global_level" />
-    </xsl:apply-templates>
+    <xsl:param name="preceding-siblings" select="0"/>
+    <xsl:for-each select="node()">
+      <xsl:choose>
+        <xsl:when test="self::br">
+          <w:p>
+            <w:pPr>
+              <w:pStyle w:val="ListParagraph"></w:pStyle>
+              <w:numPr>
+                <w:ilvl w:val="0"/>
+                <w:numId w:val="0"/>
+              </w:numPr>
+            </w:pPr>
+            <w:r></w:r>
+          </w:p>
+        </xsl:when>
+        <xsl:when test="self::ol|self::ul">
+          <xsl:apply-templates>
+            <xsl:with-param name="global_level" select="$global_level" />
+          </xsl:apply-templates>
+        </xsl:when>
+        <xsl:when test="not(descendant::li)"> <!-- simpler div, p, headings, etc... -->
+          <xsl:variable name="ilvl" select="count(ancestor::ol) + count(ancestor::ul) - 1"></xsl:variable>
+          <xsl:choose>
+            <xsl:when test="$preceding-siblings + count(preceding-sibling::*) > 0">
+              <w:p>
+                <w:pPr>
+                  <w:pStyle w:val="ListParagraph"></w:pStyle>
+                  <w:numPr>
+                    <w:ilvl w:val="0"/>
+                    <w:numId w:val="0"/>
+                  </w:numPr>
+                  <w:ind w:left="{720 * ($ilvl + 1)}"/>
+                </w:pPr>
+                <xsl:apply-templates/>
+              </w:p>
+            </xsl:when>
+            <xsl:otherwise>
+              <w:p>
+                <w:pPr>
+                  <w:pStyle w:val="ListParagraph"></w:pStyle>
+                  <w:numPr>
+                    <w:ilvl w:val="{$ilvl}"/>
+                    <w:numId w:val="{$global_level}"/>
+                  </w:numPr>
+                </w:pPr>
+                <xsl:apply-templates/>
+              </w:p>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise> <!-- mixed things div having list and stuff content... -->
+          <xsl:call-template name="listItem">
+            <xsl:with-param name="global_level" select="$global_level" />
+            <xsl:with-param name="preceding-siblings" select="$preceding-siblings + count(preceding-sibling::*)" />
+          </xsl:call-template>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="span[not(ancestor::td) and not(ancestor::li) and (preceding-sibling::h1 or preceding-sibling::h2 or preceding-sibling::h3 or preceding-sibling::h4 or preceding-sibling::h5 or preceding-sibling::h6 or preceding-sibling::table or preceding-sibling::p or preceding-sibling::ol or preceding-sibling::ul or preceding-sibling::div or following-sibling::h1 or following-sibling::h2 or following-sibling::h3 or following-sibling::h4 or following-sibling::h5 or following-sibling::h6 or following-sibling::table or following-sibling::p or following-sibling::ol or following-sibling::ul or following-sibling::div)]

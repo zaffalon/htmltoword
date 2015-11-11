@@ -10,8 +10,9 @@ end
 
 def compare_resulting_wordml_with_expected(html, resulting_wordml, extras: false)
   source = Nokogiri::HTML(html.gsub(/>\s+</, "><"))
+  cleaned_source = Nokogiri::XSLT(File.open(File.join(Htmltoword.config.default_xslt_path, 'inline_elements.xslt'))).transform(source)
   xslt = Nokogiri::XSLT(File.open(Htmltoword::Document.xslt_template(extras)))
-  result = xslt.transform(source)
+  result = xslt.transform(cleaned_source)
   result.xpath('//comment()').remove
   result = remove_declaration(result.to_s)
   expect(remove_whitespace(result.to_s)).to eq(remove_whitespace(resulting_wordml))
