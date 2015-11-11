@@ -1,5 +1,10 @@
 CHANGELOG
 
+Version 0.5
+* Better handling of external links
+* Better handling of inline elements
+* Better support for complex lists
+
 Version 0.4.4
 * Update default template to remove language
 * Bug fixes on lists and tables having br elements
