@@ -6,7 +6,7 @@ unless defined? Mime::DOCX
 end
 
 ActionController::Renderers.add :docx do |filename, options|
-  formats[0] = :docx unless formats.include?(:docx) || Rails.version < '3.2'
+  formats << :docx unless formats.include?(:docx) || Rails.version < '3.2'
 
   # This is ugly and should be solved with regular file utils
   if options[:template] == action_name
