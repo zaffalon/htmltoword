@@ -1,5 +1,8 @@
 CHANGELOG
 
+Version 0.5.1
+* Bugfix on ActionController::Renderers formats
+
 Version 0.5
 * Better handling of external links
 * Better handling of inline elements
