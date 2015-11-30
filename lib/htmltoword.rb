@@ -15,12 +15,15 @@ module Htmltoword
       @configuration ||= Configuration.new
     end
 
-    alias :config :configuration
+    alias_method :config, :configuration
   end
 end
-
 
 require_relative 'htmltoword/version'
 require_relative 'htmltoword/htmltoword_helper'
 require_relative 'htmltoword/document'
-require_relative 'htmltoword/action_controller'
+
+if defined?(Rails)
+  require_relative 'htmltoword/renderer'
+  require_relative 'htmltoword/railtie'
+end
