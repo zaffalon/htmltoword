@@ -277,12 +277,12 @@
   <xsl:template match="text()">
     <xsl:if test="string-length(.) > 0">
       <w:r>
-        <xsl:if test="ancestor::i or ancestor::em">
+        <xsl:if test="ancestor::i">
           <w:rPr>
             <w:i />
           </w:rPr>
         </xsl:if>
-        <xsl:if test="ancestor::b or ancestor::strong">
+        <xsl:if test="ancestor::b">
           <w:rPr>
             <w:b />
           </w:rPr>
@@ -290,6 +290,21 @@
         <xsl:if test="ancestor::u">
           <w:rPr>
             <w:u w:val="single"/>
+          </w:rPr>
+        </xsl:if>
+        <xsl:if test="ancestor::s">
+          <w:rPr>
+            <w:strike w:val="true"/>
+          </w:rPr>
+        </xsl:if>
+        <xsl:if test="ancestor::sub">
+          <w:rPr>
+            <w:vertAlign w:val="subscript"/>
+          </w:rPr>
+        </xsl:if>
+        <xsl:if test="ancestor::sup">
+          <w:rPr>
+            <w:vertAlign w:val="superscript"/>
           </w:rPr>
         </xsl:if>
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
