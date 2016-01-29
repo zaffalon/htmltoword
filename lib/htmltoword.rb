@@ -1,6 +1,4 @@
 # encoding: UTF-8
-# require 'action_controller'
-# require 'action_view'
 require 'nokogiri'
 require 'zip'
 require_relative 'htmltoword/configuration'
@@ -20,7 +18,8 @@ module Htmltoword
 end
 
 require_relative 'htmltoword/version'
-require_relative 'htmltoword/htmltoword_helper'
+require_relative 'htmltoword/helpers/templates_helper'
+require_relative 'htmltoword/helpers/xslt_helper'
 require_relative 'htmltoword/document'
 
 if defined?(Rails)

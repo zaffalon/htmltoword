@@ -1,26 +1,26 @@
 module Htmltoword
   class Document
-    class << self
-      include HtmltowordHelper
+    include XSLTHelper
 
+    class << self
+      include TemplatesHelper
       def create(content, template_name = nil, extras = false)
         template_name += extension if template_name && !template_name.end_with?(extension)
         document = new(template_file(template_name))
-        document.replace_file(content, Document.doc_xml_file, extras)
+        document.replace_files(content, extras)
         document.generate
       end
 
       def create_and_save(content, file_path, template_name = nil, extras = false)
-        File.open(file_path, "wb") do |out|
+        File.open(file_path, 'wb') do |out|
           out << create(content, template_name, extras)
         end
       end
 
-      def create_with_content(template, content, set=nil, extras = false)
+      def create_with_content(template, content, extras = false)
         template += extension unless template.end_with?(extension)
-        content = replace_values(content, set) if set
         document = new(template_file(template))
-        document.replace_file(content, Document.doc_xml_file, extras)
+        document.replace_files(content, extras)
         document.generate
       end
 
@@ -39,18 +39,6 @@ module Htmltoword
       def relations_xml_file
         'word/_rels/document.xml.rels'
       end
-
-      def numbering_xslt
-        File.join(Htmltoword.config.default_xslt_path, 'numbering.xslt')
-      end
-
-      def relations_xslt
-        File.join(Htmltoword.config.default_xslt_path, 'relations.xslt')
-      end
-
-      def xslt_template(extras = false)
-        File.join(Htmltoword.config.default_xslt_path, (extras ? 'htmltoword.xslt' : 'base.xslt'))
-      end
     end
 
     def initialize(template_path)
@@ -67,7 +55,9 @@ module Htmltoword
           template_zip.each do |entry|
             out.put_next_entry entry.name
             if @replaceable_files[entry.name] && entry.name == Document.doc_xml_file
-              source = entry.get_input_stream.read.sub(/(<w:body>)((.|\n)*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\4")
+              source = entry.get_input_stream.read
+              # Change only the body of document. TODO: Improve this...
+              source = source.sub(/(<w:body>)((.|\n)*?)(<w:sectPr)/, "\\1#{@replaceable_files[entry.name]}\\4")
               out.write(source)
             elsif @replaceable_files[entry.name]
               out.write(@replaceable_files[entry.name])
@@ -80,22 +70,27 @@ module Htmltoword
       end
     end
 
-    def replace_file(html, file_name = Document.doc_xml_file, extras = false)
-      html = html.presence || '<body></body>'
+    def replace_files(html, extras = false)
+      html = '<body></body>' if html.nil? || html.empty?
       source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
-      transform_and_replace(source, Document.numbering_xslt, Document.numbering_xml_file)
-      transform_and_replace(source, Document.relations_xslt, Document.relations_xml_file)
-      cleaned_source = Nokogiri::XSLT(File.open(File.join(Htmltoword.config.default_xslt_path, 'inline_elements.xslt'))).transform(source)
-      transform_and_replace(cleaned_source, Document.xslt_template(extras), file_name, extras)
+      transform_and_replace(source, xslt_path('numbering'), Document.numbering_xml_file)
+      transform_and_replace(source, xslt_path('relations'), Document.relations_xml_file)
+      transform_doc_xml(source, extras)
+    end
+
+    def transform_doc_xml(source, extras = false)
+      transformed_source = xslt(stylesheet_name: 'cleanup').transform(source)
+      transformed_source = xslt(stylesheet_name: 'inline_elements').transform(transformed_source)
+      transform_and_replace(transformed_source, document_xslt(extras), Document.doc_xml_file, extras)
     end
 
     private
 
-    def transform_and_replace source, xslt, file, remove_ns = false
-      xslt = Nokogiri::XSLT(File.open(xslt))
-      content = xslt.apply_to(source)
-      content.gsub!(/\s*xmlns:(\w+)="(.*?)\s*"/,'') if remove_ns
-      @replaceable_files[file] =  content
+    def transform_and_replace(source, stylesheet_path, file, remove_ns = false)
+      stylesheet = xslt(stylesheet_path: stylesheet_path)
+      content = stylesheet.apply_to(source)
+      content.gsub!(/\s*xmlns:(\w+)="(.*?)\s*"/, '') if remove_ns
+      @replaceable_files[file] = content
     end
   end
 end
