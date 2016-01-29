@@ -1,4 +1,6 @@
 CHANGELOG
+Version 0.6.0
+* Improve support for inline elements
 
 Version 0.5.1
 * Bugfix on ActionController::Renderers formats
