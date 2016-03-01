@@ -66,8 +66,10 @@ All other elements not specified below
 [var](#code-kbd-samp-tt-var)
 
 ### Blocks
+[article](#div)
 [div](#div)
 [p](#p)
+[section](#div)
 [table](#table)
 [ul/ol](#lists)
 
@@ -96,7 +98,7 @@ Future implementation: Assign a monospaced style, most likely using *Courier New
 Displayed as normal text with Strikethrough effect.
 
 #### div
-Displayed as paragraphs.
+Divs, sections and articles are displayed as paragraphs.
 Only style supported at the moment is alignment. See the wiki on [styles](https://github.com/karnov/htmltoword/wiki/Styles-and-classes) for more
 
 #### ins, u

@@ -416,4 +416,104 @@ describe "XSLT to align div, p and td tags" do
     # TODO: Known bug, not implemented yet.
     # <div class=“center”> Something <div> else </div> </div> -> else won’t be centered.
   end
+
+  it "transforms articles with proper alignment" do
+    html = <<-EOL
+  <!DOCTYPE html>
+  <html>
+  <head></head>
+  <body>
+    <article style="text-align:center;"> article using text-aligned center</article>
+    <article style="text-align:right;"> article using text-aligned right</article>
+    <article class='left'><strong>article class left and strong</strong></article>
+    <article> Just an article </article>
+  </body>
+  </html>
+    EOL
+    expected_wordml = <<-EOL
+  <w:p>
+    <w:pPr>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve"> article using text-aligned center</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:jc w:val="right"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve"> article using text-aligned right</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:jc w:val="left"/>
+    </w:pPr>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">article class left and strong</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve"> Just an article </w:t>
+    </w:r>
+  </w:p>
+    EOL
+    compare_resulting_wordml_with_expected(html, expected_wordml.strip)
+  end
+
+  it "transforms sections with proper alignment" do
+    html = <<-EOL
+  <!DOCTYPE html>
+  <html>
+  <head></head>
+  <body>
+    <section style="text-align:center;"> section using text-aligned center</section>
+    <section style="text-align:right;"> section using text-aligned right</section>
+    <section class='left'><strong>section class left and strong</strong></section>
+    <section> Just an section </section>
+  </body>
+  </html>
+    EOL
+    expected_wordml = <<-EOL
+  <w:p>
+    <w:pPr>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve"> section using text-aligned center</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:jc w:val="right"/>
+    </w:pPr>
+    <w:r>
+      <w:t xml:space="preserve"> section using text-aligned right</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:pPr>
+      <w:jc w:val="left"/>
+    </w:pPr>
+    <w:r>
+      <w:rPr>
+        <w:b/>
+      </w:rPr>
+      <w:t xml:space="preserve">section class left and strong</w:t>
+    </w:r>
+  </w:p>
+  <w:p>
+    <w:r>
+      <w:t xml:space="preserve"> Just an section </w:t>
+    </w:r>
+  </w:p>
+    EOL
+    compare_resulting_wordml_with_expected(html, expected_wordml.strip)
+  end
 end
