@@ -5,9 +5,16 @@
 
   <xsl:template match="a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]" priority="1">
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="{@href}" TargetMode="External">
-      <xsl:attribute name="Id">rId<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')]) + 8"/></xsl:attribute>
+      <xsl:attribute name="Id">rIdHref<xsl:value-of select="count(preceding::a[starts-with(@href, 'http://') or starts-with(@href, 'https://')])+1"/></xsl:attribute>
     </Relationship>
   </xsl:template>
+
+  <xsl:template match="img" priority="0">
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="{@src}" TargetMode="External">
+      <xsl:attribute name="Id">rIdImg<xsl:value-of select="count(preceding::img)+1"/></xsl:attribute>
+    </Relationship>
+  </xsl:template>
+
 
   <xsl:template match="/">
     <Relationships>
