@@ -1,64 +1,280 @@
 require 'spec_helper'
 
 describe "XSLT to include images" do
-  it "generates correct style from html" do
+  it "generates correct image wordml from html" do
     html = <<-EOL
   <!DOCTYPE html>
   <html>
   <head></head>
   <body>
-    <p><img src="http://placehold.it/250x100" id="img" style="width: 250px; height: 100px"></p>
-    <p><img src="http://placehold.it/250x100" id="img" style="height:100px width:250px; margin-left:10px"></p>
-    <p><img src="http://placehold.it/150x100" id="img" data-width="150" style="width:250px; height:100px"></p>
-    <p><img src="http://placehold.it/250x150" id="img" data-height="150" style="width:250px; height:100px"></p>
-    <p><img src="http://placehold.it/150x150" id="img" data-width="150" data-height="150" style="width:250px; height:100px"></p>
-    <p><img src="http://placehold.it/150x150" id="img" data-width="150" data-height="150""></p>
+    <p><img src="http://placehold.it/250x100.png" alt="Fancy image description" style="width: 250px; height: 100px"></p>
+    <p><img src="http://placehold.it/250x100.png" data-filename="image.jpg" style="height:100px; width:250px; margin-left:10px"></p>
+    <p><img src="http://placehold.it/150x100.png" data-width="150px" style="width:250px; height:100px"></p>
+    <p><img src="http://placehold.it/250x150.png" data-height="150px" style="width:250px; height:100px"></p>
+    <p><img src="http://placehold.it/150x150.png" data-width="150px" data-height="150px" style="width:250px; height:100px"></p>
+    <p><img src="http://placehold.it/150x150.png" data-width="150px" data-height="150px"></p>
     </body>
   </html>
     EOL
 
     expected_wordml = <<-EOL
     <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:250;height:100">
-          <v:imagedata r:id="rIdImg1"/>
-        </v:shape>
-      </w:pict>
+    <w:drawing>
+      <wp:inline distT="0" distB="0" distL="0" distR="0">
+        <wp:extent cx="2540000" cy="1016000"/>
+        <wp:effectExtent l="0" t="0" r="0" b="0"/>
+        <wp:docPr id="1" name="Picture 1"/>
+        <wp:cNvGraphicFramePr>
+          <a:graphicFrameLocks noChangeAspect="1"/>
+        </wp:cNvGraphicFramePr>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+            <pic:pic>
+              <pic:nvPicPr>
+                <pic:cNvPr id="1" title="Fancy image description" name="250x100.png"/>
+                <pic:cNvPicPr/>
+              </pic:nvPicPr>
+              <pic:blipFill>
+                <a:blip r:embed="rIdImg1">
+                  <a:extLst>
+                    <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                      <a14:useLocalDpi val="0"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:blip>
+                <a:stretch>
+                  <a:fillRect/>
+                </a:stretch>
+              </pic:blipFill>
+              <pic:spPr>
+                <a:xfrm>
+                  <a:off x="0" y="0"/>
+                  <a:ext cx="2540000" cy="1016000"/>
+                </a:xfrm>
+                <a:prstGeom prst="rect">
+                  <a:avLst/>
+                </a:prstGeom>
+              </pic:spPr>
+            </pic:pic>
+          </a:graphicData>
+        </a:graphic>
+      </wp:inline>
+    </w:drawing>
     </w:p>
     <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:250;height:100">
-          <v:imagedata r:id="rIdImg2"/>
-        </v:shape>
-      </w:pict>
+    <w:drawing>
+      <wp:inline distT="0" distB="0" distL="0" distR="0">
+        <wp:extent cx="2540000" cy="1016000"/>
+        <wp:effectExtent l="0" t="0" r="0" b="0"/>
+        <wp:docPr id="2" name="Picture 2"/>
+        <wp:cNvGraphicFramePr>
+          <a:graphicFrameLocks noChangeAspect="1"/>
+        </wp:cNvGraphicFramePr>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+            <pic:pic>
+              <pic:nvPicPr>
+                <pic:cNvPr id="2" title="" name="image.jpg"/>
+                <pic:cNvPicPr/>
+              </pic:nvPicPr>
+              <pic:blipFill>
+                <a:blip r:embed="rIdImg2">
+                  <a:extLst>
+                    <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                      <a14:useLocalDpi val="0"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:blip>
+                <a:stretch>
+                  <a:fillRect/>
+                </a:stretch>
+              </pic:blipFill>
+              <pic:spPr>
+                <a:xfrm>
+                  <a:off x="0" y="0"/>
+                  <a:ext cx="2540000" cy="1016000"/>
+                </a:xfrm>
+                <a:prstGeom prst="rect">
+                  <a:avLst/>
+                </a:prstGeom>
+              </pic:spPr>
+            </pic:pic>
+          </a:graphicData>
+        </a:graphic>
+      </wp:inline>
+    </w:drawing>
     </w:p>
     <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:150;height:100">
-          <v:imagedata r:id="rIdImg3"/>
-        </v:shape>
-      </w:pict>
+    <w:drawing>
+      <wp:inline distT="0" distB="0" distL="0" distR="0">
+        <wp:extent cx="1524000" cy="1016000"/>
+        <wp:effectExtent l="0" t="0" r="0" b="0"/>
+        <wp:docPr id="3" name="Picture 3"/>
+        <wp:cNvGraphicFramePr>
+          <a:graphicFrameLocks noChangeAspect="1"/>
+        </wp:cNvGraphicFramePr>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+            <pic:pic>
+              <pic:nvPicPr>
+                <pic:cNvPr id="3" title="" name="150x100.png"/>
+                <pic:cNvPicPr/>
+              </pic:nvPicPr>
+              <pic:blipFill>
+                <a:blip r:embed="rIdImg3">
+                  <a:extLst>
+                    <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                      <a14:useLocalDpi val="0"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:blip>
+                <a:stretch>
+                  <a:fillRect/>
+                </a:stretch>
+              </pic:blipFill>
+              <pic:spPr>
+                <a:xfrm>
+                  <a:off x="0" y="0"/>
+                  <a:ext cx="1524000" cy="1016000"/>
+                </a:xfrm>
+                <a:prstGeom prst="rect">
+                  <a:avLst/>
+                </a:prstGeom>
+              </pic:spPr>
+            </pic:pic>
+          </a:graphicData>
+        </a:graphic>
+      </wp:inline>
+    </w:drawing>
     </w:p>
     <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:250;height:150">
-          <v:imagedata r:id="rIdImg4"/>
-        </v:shape>
-      </w:pict>
+    <w:drawing>
+      <wp:inline distT="0" distB="0" distL="0" distR="0">
+        <wp:extent cx="2540000" cy="1524000"/>
+        <wp:effectExtent l="0" t="0" r="0" b="0"/>
+        <wp:docPr id="4" name="Picture 4"/>
+        <wp:cNvGraphicFramePr>
+          <a:graphicFrameLocks noChangeAspect="1"/>
+        </wp:cNvGraphicFramePr>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+            <pic:pic>
+              <pic:nvPicPr>
+                <pic:cNvPr id="4" title="" name="250x150.png"/>
+                <pic:cNvPicPr/>
+              </pic:nvPicPr>
+              <pic:blipFill>
+                <a:blip r:embed="rIdImg4">
+                  <a:extLst>
+                    <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                      <a14:useLocalDpi val="0"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:blip>
+                <a:stretch>
+                  <a:fillRect/>
+                </a:stretch>
+              </pic:blipFill>
+              <pic:spPr>
+                <a:xfrm>
+                  <a:off x="0" y="0"/>
+                  <a:ext cx="2540000" cy="1524000"/>
+                </a:xfrm>
+                <a:prstGeom prst="rect">
+                  <a:avLst/>
+                </a:prstGeom>
+              </pic:spPr>
+            </pic:pic>
+          </a:graphicData>
+        </a:graphic>
+      </wp:inline>
+    </w:drawing>
     </w:p>
     <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:150;height:150">
-          <v:imagedata r:id="rIdImg5"/>
-        </v:shape>
-      </w:pict>
+    <w:drawing>
+      <wp:inline distT="0" distB="0" distL="0" distR="0">
+        <wp:extent cx="1524000" cy="1524000"/>
+        <wp:effectExtent l="0" t="0" r="0" b="0"/>
+        <wp:docPr id="5" name="Picture 5"/>
+        <wp:cNvGraphicFramePr>
+          <a:graphicFrameLocks noChangeAspect="1"/>
+        </wp:cNvGraphicFramePr>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+            <pic:pic>
+              <pic:nvPicPr>
+                <pic:cNvPr id="5" title="" name="150x150.png"/>
+                <pic:cNvPicPr/>
+              </pic:nvPicPr>
+              <pic:blipFill>
+                <a:blip r:embed="rIdImg5">
+                  <a:extLst>
+                    <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                      <a14:useLocalDpi val="0"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:blip>
+                <a:stretch>
+                  <a:fillRect/>
+                </a:stretch>
+              </pic:blipFill>
+              <pic:spPr>
+                <a:xfrm>
+                  <a:off x="0" y="0"/>
+                  <a:ext cx="1524000" cy="1524000"/>
+                </a:xfrm>
+                <a:prstGeom prst="rect">
+                  <a:avLst/>
+                </a:prstGeom>
+              </pic:spPr>
+            </pic:pic>
+          </a:graphicData>
+        </a:graphic>
+      </wp:inline>
+    </w:drawing>
     </w:p>
     <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:150;height:150">
-          <v:imagedata r:id="rIdImg6"/>
-        </v:shape>
-      </w:pict>
+    <w:drawing>
+      <wp:inline distT="0" distB="0" distL="0" distR="0">
+        <wp:extent cx="1524000" cy="1524000"/>
+        <wp:effectExtent l="0" t="0" r="0" b="0"/>
+        <wp:docPr id="6" name="Picture 6"/>
+        <wp:cNvGraphicFramePr>
+          <a:graphicFrameLocks noChangeAspect="1"/>
+        </wp:cNvGraphicFramePr>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+            <pic:pic>
+              <pic:nvPicPr>
+                <pic:cNvPr id="6" title="" name="150x150.png"/>
+                <pic:cNvPicPr/>
+              </pic:nvPicPr>
+              <pic:blipFill>
+                <a:blip r:embed="rIdImg6">
+                  <a:extLst>
+                    <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                      <a14:useLocalDpi val="0"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:blip>
+                <a:stretch>
+                  <a:fillRect/>
+                </a:stretch>
+              </pic:blipFill>
+              <pic:spPr>
+                <a:xfrm>
+                  <a:off x="0" y="0"/>
+                  <a:ext cx="1524000" cy="1524000"/>
+                </a:xfrm>
+                <a:prstGeom prst="rect">
+                  <a:avLst/>
+                </a:prstGeom>
+              </pic:spPr>
+            </pic:pic>
+          </a:graphicData>
+        </a:graphic>
+      </wp:inline>
+    </w:drawing>
     </w:p>
     EOL
 
@@ -66,41 +282,18 @@ describe "XSLT to include images" do
     compare_resulting_wordml_with_expected(html, expected_wordml.strip)
   end
 
-  it "transforms simple img tags" do
-    html = <<-EOL
-  <!DOCTYPE html>
-  <html>
-  <head></head>
-  <body>
-    <p><img src="http://placehold.it/350x150" id="img" data-width="350" data-height="150"></p>
-  </body>
-  </html>
-    EOL
 
-    expected_wordml = <<-EOL
-    <w:p>
-      <w:pict>
-        <v:shape type="#_x0000_t75" id="img" style="width:350;height:150">
-          <v:imagedata r:id="rIdImg1"/>
-        </v:shape>
-      </w:pict>
-    </w:p>
-    EOL
-
-
-    compare_resulting_wordml_with_expected(html, expected_wordml.strip)
-  end
-
-  it "generates correct relations even when links present" do
+  it "generates correct relations" do
     html = <<-EOL
   <!DOCTYPE html>
   <html>
   <head></head>
   <body>
     <p><a href="http://somelink.com">Link text.</a></p>
-    <p><img src="http://placehold.it/350x150" id="img" data-width="350" data-height="150"></p>
+    <p><img src="http://placehold.it/350x150" id="img" data-external="true" style="width:350px;height:150px"></p>
     <p><a href="http://someotherlink2.com">Other link text 2.</a></p>
-    <p><img src="http://placehold.it/400x250" id="img2" data-width="400" data-height="250"></p>
+    <p><img src="http://placehold.it/400x250.png" id="img2" data-filename="placeholder.png" style="width:450px;height:250px"></p>
+    <p><img src="http://placehold.it/400x250.jpg" id="img3" style="width:400px;height:250px"></p>
   </body>
   </html>
     EOL
@@ -116,11 +309,10 @@ describe "XSLT to include images" do
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://somelink.com" TargetMode="External" Id="rIdHref1"/>
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="http://placehold.it/350x150" TargetMode="External" Id="rIdImg1"/>
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink2.com" TargetMode="External" Id="rIdHref2"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="http://placehold.it/400x250" TargetMode="External" Id="rIdImg2"/>
-
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image2.png" Id="rIdImg2"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image3.jpg" Id="rIdImg3"/>
   </Relationships>
     EOL
     compare_relations_xml(html, expected_relations_xml)
-
   end
 end

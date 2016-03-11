@@ -44,6 +44,7 @@ module Htmltoword
     def initialize(template_path)
       @replaceable_files = {}
       @template_path = template_path
+      @image_files = []
     end
 
     #
@@ -65,6 +66,13 @@ module Htmltoword
               out.write(template_zip.read(entry.name))
             end
           end
+          if @image_files.size > 0
+          #stream the image files into the media folder using open-uri
+            @image_files.each do |hash|
+              out.put_next_entry("word/media/#{hash[:filename]}")
+              out.write open(hash[:url]).read
+            end
+          end
         end
         buffer.string
       end
@@ -76,6 +84,7 @@ module Htmltoword
       transform_and_replace(source, xslt_path('numbering'), Document.numbering_xml_file)
       transform_and_replace(source, xslt_path('relations'), Document.relations_xml_file)
       transform_doc_xml(source, extras)
+      get_local_images(source)
     end
 
     def transform_doc_xml(source, extras = false)
@@ -85,6 +94,14 @@ module Htmltoword
     end
 
     private
+    def get_local_images(source)
+      source.css('img').each_with_index do |image,i|
+        unless image["data-external"]
+          filename = image['data-filename'] ? image['data-filename'] : image['src'].split("/").last
+          @image_files << { filename: "image#{i+1}#{File.extname(filename)}", url: image['src'] }
+        end
+      end
+    end
 
     def transform_and_replace(source, stylesheet_path, file, remove_ns = false)
       stylesheet = xslt(stylesheet_path: stylesheet_path)
