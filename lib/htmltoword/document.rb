@@ -39,6 +39,10 @@ module Htmltoword
       def relations_xml_file
         'word/_rels/document.xml.rels'
       end
+
+      def content_types_xml_file
+        '[Content_Types].xml'
+      end
     end
 
     def initialize(template_path)
@@ -62,6 +66,10 @@ module Htmltoword
               out.write(source)
             elsif @replaceable_files[entry.name]
               out.write(@replaceable_files[entry.name])
+            elsif entry.name == Document.content_types_xml_file
+              File.open(File.join(::Htmltoword.config.default_templates_path, '[Content_Types].xml')) do |f|
+                out.write(f.read)
+              end
             else
               out.write(template_zip.read(entry.name))
             end
@@ -84,7 +92,7 @@ module Htmltoword
       transform_and_replace(source, xslt_path('numbering'), Document.numbering_xml_file)
       transform_and_replace(source, xslt_path('relations'), Document.relations_xml_file)
       transform_doc_xml(source, extras)
-      get_local_images(source)
+      local_images(source)
     end
 
     def transform_doc_xml(source, extras = false)
@@ -94,11 +102,11 @@ module Htmltoword
     end
 
     private
-    def get_local_images(source)
+    def local_images(source)
       source.css('img').each_with_index do |image,i|
         unless image["data-external"]
           filename = image['data-filename'] ? image['data-filename'] : image['src'].split("/").last
-          @image_files << { filename: "image#{i+1}#{File.extname(filename)}", url: image['src'] }
+          @image_files << { filename: "image#{i+1}#{File.extname(filename)}", url: image['src'], ext: File.extname(filename) }
         end
       end
     end
