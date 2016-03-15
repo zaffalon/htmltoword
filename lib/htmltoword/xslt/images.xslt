@@ -66,7 +66,7 @@
               </pic:nvPicPr>
               <pic:blipFill>
                 <a:blip>
-                  <xsl:attribute name="r:embed">rIdImg<xsl:value-of select="count(preceding::img)+1" /></xsl:attribute>
+                  <xsl:attribute name="r:embed"><xsl:call-template name="relationship-id"/></xsl:attribute>
                   <a:extLst>
                     <a:ext uri="{{28A0092B-C50C-407E-A947-70E740481C1C}}">
                       <a14:useLocalDpi val="0"/>

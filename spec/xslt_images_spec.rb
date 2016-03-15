@@ -35,7 +35,7 @@ describe "XSLT to include images" do
                 <pic:cNvPicPr/>
               </pic:nvPicPr>
               <pic:blipFill>
-                <a:blip r:embed="rIdImg1">
+                <a:blip r:embed="rId8">
                   <a:extLst>
                     <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
                       <a14:useLocalDpi val="0"/>
@@ -78,7 +78,7 @@ describe "XSLT to include images" do
                 <pic:cNvPicPr/>
               </pic:nvPicPr>
               <pic:blipFill>
-                <a:blip r:embed="rIdImg2">
+                <a:blip r:embed="rId9">
                   <a:extLst>
                     <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
                       <a14:useLocalDpi val="0"/>
@@ -121,7 +121,7 @@ describe "XSLT to include images" do
                 <pic:cNvPicPr/>
               </pic:nvPicPr>
               <pic:blipFill>
-                <a:blip r:embed="rIdImg3">
+                <a:blip r:embed="rId10">
                   <a:extLst>
                     <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
                       <a14:useLocalDpi val="0"/>
@@ -164,7 +164,7 @@ describe "XSLT to include images" do
                 <pic:cNvPicPr/>
               </pic:nvPicPr>
               <pic:blipFill>
-                <a:blip r:embed="rIdImg4">
+                <a:blip r:embed="rId11">
                   <a:extLst>
                     <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
                       <a14:useLocalDpi val="0"/>
@@ -207,7 +207,7 @@ describe "XSLT to include images" do
                 <pic:cNvPicPr/>
               </pic:nvPicPr>
               <pic:blipFill>
-                <a:blip r:embed="rIdImg5">
+                <a:blip r:embed="rId12">
                   <a:extLst>
                     <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
                       <a14:useLocalDpi val="0"/>
@@ -250,7 +250,7 @@ describe "XSLT to include images" do
                 <pic:cNvPicPr/>
               </pic:nvPicPr>
               <pic:blipFill>
-                <a:blip r:embed="rIdImg6">
+                <a:blip r:embed="rId13">
                   <a:extLst>
                     <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
                       <a14:useLocalDpi val="0"/>
@@ -306,11 +306,11 @@ describe "XSLT to include images" do
     <Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/>
     <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>
     <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://somelink.com" TargetMode="External" Id="rIdHref1"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="http://placehold.it/350x150" TargetMode="External" Id="rIdImg1"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink2.com" TargetMode="External" Id="rIdHref2"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image2.png" Id="rIdImg2"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image3.jpg" Id="rIdImg3"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://somelink.com" TargetMode="External" Id="rId8"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="http://placehold.it/350x150" TargetMode="External" Id="rId9"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink2.com" TargetMode="External" Id="rId10"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image2.png" Id="rId11"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image3.jpg" Id="rId12"/>
   </Relationships>
     EOL
     compare_relations_xml(html, expected_relations_xml)

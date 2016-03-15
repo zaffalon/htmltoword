@@ -38,7 +38,7 @@ describe "XSLT for Links" do
     </w:r>
   </w:p>
   <w:p>
-    <w:hyperlink r:id="rIdHref1">
+    <w:hyperlink r:id="rId8">
       <w:r>
         <w:rPr>
           <w:rStyle w:val="Hyperlink"/>
@@ -50,7 +50,7 @@ describe "XSLT for Links" do
     </w:hyperlink>
   </w:p>
   <w:p>
-    <w:hyperlink r:id="rIdHref2">
+    <w:hyperlink r:id="rId9">
       <w:r>
         <w:rPr>
           <w:rStyle w:val="Hyperlink"/>
@@ -67,7 +67,7 @@ describe "XSLT for Links" do
     </w:r>
   </w:p>
   <w:p>
-    <w:hyperlink r:id=\"rIdHref3\">
+    <w:hyperlink r:id=\"rId10\">
       <w:r>
         <w:rPr>
           <w:rStyle w:val=\"Hyperlink\"/>
@@ -79,7 +79,7 @@ describe "XSLT for Links" do
     </w:hyperlink>
   </w:p>
   <w:p>
-    <w:hyperlink r:id=\"rIdHref4\">
+    <w:hyperlink r:id=\"rId11\">
       <w:r>
         <w:rPr>
           <w:rStyle w:val=\"Hyperlink\"/>
@@ -106,7 +106,7 @@ describe "XSLT for Links" do
     <w:r>
       <w:t xml:space="preserve">First item: </w:t>
     </w:r>
-    <w:hyperlink r:id="rIdHref5">
+    <w:hyperlink r:id="rId12">
       <w:r>
         <w:rPr>
           <w:rStyle w:val="Hyperlink"/>
@@ -128,11 +128,11 @@ describe "XSLT for Links" do
     <Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/>
     <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>
     <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://somelink.com" TargetMode="External" Id="rIdHref1"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://someotherlink.com" TargetMode="External" Id="rIdHref2"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink2.com" TargetMode="External" Id="rIdHref3"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink3.com" TargetMode="External" Id="rIdHref4"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://listlink.com" TargetMode="External" Id="rIdHref5"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://somelink.com" TargetMode="External" Id="rId8"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://someotherlink.com" TargetMode="External" Id="rId9"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink2.com" TargetMode="External" Id="rId10"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink3.com" TargetMode="External" Id="rId11"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://listlink.com" TargetMode="External" Id="rId12"/>
   </Relationships>
     EOL
 
