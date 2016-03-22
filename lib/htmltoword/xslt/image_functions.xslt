@@ -17,7 +17,7 @@
                 exclude-result-prefixes="java msxsl ext w o v WX aml w10"
                 extension-element-prefixes="func">
 
-  <!-- template as function used to return the name of an image. -->
+  <!-- template as function used to return the file extension of an image. -->
   <xsl:template name="image-extension">
     <xsl:param name="data-filename" select="." />
     <xsl:param name="source" select="." />
@@ -71,7 +71,7 @@
 
     <xsl:choose>
       <xsl:when test="string-length($length) = 0"></xsl:when>
-      <xsl:when test="substring($length,1,1) = '0'                     or substring($length,1,1) = '1'                     or substring($length,1,1) = '2'                     or substring($length,1,1) = '3'                     or substring($length,1,1) = '4'                     or substring($length,1,1) = '5'                     or substring($length,1,1) = '6'                     or substring($length,1,1) = '7'                     or substring($length,1,1) = '8'                     or substring($length,1,1) = '9'                     or substring($length,1,1) = '.'">
+      <xsl:when test="substring($length,1,1) = '0' or substring($length,1,1) = '1'                                      or substring($length,1,1) = '2' or substring($length,1,1) = '3'                                      or substring($length,1,1) = '4' or substring($length,1,1) = '5'                                      or substring($length,1,1) = '6' or substring($length,1,1) = '7'                                      or substring($length,1,1) = '8' or substring($length,1,1) = '9'                                      or substring($length,1,1) = '.'">
         <xsl:value-of select="substring($length,1,1)"></xsl:value-of>
         <xsl:call-template name="length-magnitude">
           <xsl:with-param name="length" select="substring($length,2)"></xsl:with-param>

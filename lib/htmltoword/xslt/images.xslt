@@ -36,7 +36,7 @@
 
   <xsl:include href="./image_functions.xslt"/>
 
-  <xsl:template match="img" name="image">
+  <xsl:template match="img|body/img" name="image">
     <w:drawing>
       <wp:inline distT="0" distB="0" distL="0" distR="0">
         <wp:extent>
@@ -126,5 +126,4 @@
       </xsl:call-template>
     </xsl:attribute>
   </xsl:template>
-
 </xsl:stylesheet>

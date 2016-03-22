@@ -7,12 +7,12 @@ describe "XSLT to include images" do
   <html>
   <head></head>
   <body>
-    <p><img src="http://placehold.it/250x100.png" alt="Fancy image description" style="width: 250px; height: 100px"></p>
-    <p><img src="http://placehold.it/250x100.png" data-filename="image.jpg" style="height:100px; width:250px; margin-left:10px"></p>
-    <p><img src="http://placehold.it/150x100.png" data-width="150px" style="width:250px; height:100px"></p>
-    <p><img src="http://placehold.it/250x150.png" data-height="150px" style="width:250px; height:100px"></p>
-    <p><img src="http://placehold.it/150x150.png" data-width="150px" data-height="150px" style="width:250px; height:100px"></p>
-    <p><img src="http://placehold.it/150x150.png" data-width="150px" data-height="150px"></p>
+    <p><img src="https://placehold.it/250x100.png" alt="Fancy image description" style="width: 250px; height: 100px"></p>
+    <p><img src="https://placehold.it/250x100.png" data-filename="image.jpg" style="height:100px; width:250px; margin-left:10px"></p>
+    <p><img src="https://placehold.it/150x100.png" data-width="150px" style="width:250px; height:100px"></p>
+    <p><img src="https://placehold.it/250x150.png" data-height="150px" style="width:250px; height:100px"></p>
+    <p><img src="https://placehold.it/150x150.png" data-width="150px" data-height="150px" style="width:250px; height:100px"></p>
+    <p><img src="https://placehold.it/150x150.png" data-width="150px" data-height="150px"></p>
     </body>
   </html>
     EOL
@@ -290,10 +290,10 @@ describe "XSLT to include images" do
   <head></head>
   <body>
     <p><a href="http://somelink.com">Link text.</a></p>
-    <p><img src="http://placehold.it/350x150" id="img" data-external="true" style="width:350px;height:150px"></p>
+    <p><img src="http://placehold.it/350x150.gif" style="width:350px;height:150px"></p>
     <p><a href="http://someotherlink2.com">Other link text 2.</a></p>
-    <p><img src="http://placehold.it/400x250.png" id="img2" data-filename="placeholder.png" style="width:450px;height:250px"></p>
-    <p><img src="http://placehold.it/400x250.jpg" id="img3" style="width:400px;height:250px"></p>
+    <p><img src="http://placehold.it/400x250.png" data-filename="placeholder.png" style="width:450px;height:250px"></p>
+    <p><img src="http://placehold.it/400x250.jpg" style="width:400px;height:250px"></p>
   </body>
   </html>
     EOL
@@ -307,7 +307,7 @@ describe "XSLT to include images" do
     <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>
     <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://somelink.com" TargetMode="External" Id="rId8"/>
-    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="http://placehold.it/350x150" TargetMode="External" Id="rId9"/>
+    <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image1.gif" Id="rId9"/>
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://someotherlink2.com" TargetMode="External" Id="rId10"/>
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image2.png" Id="rId11"/>
     <Relationship Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image3.jpg" Id="rId12"/>

@@ -102,20 +102,21 @@ module Htmltoword
     end
 
     private
-    def local_images(source)
-      source.css('img').each_with_index do |image,i|
-        unless image["data-external"]
-          filename = image['data-filename'] ? image['data-filename'] : image['src'].split("/").last
-          @image_files << { filename: "image#{i+1}#{File.extname(filename)}", url: image['src'], ext: File.extname(filename) }
-        end
-      end
-    end
 
     def transform_and_replace(source, stylesheet_path, file, remove_ns = false)
       stylesheet = xslt(stylesheet_path: stylesheet_path)
       content = stylesheet.apply_to(source)
       content.gsub!(/\s*xmlns:(\w+)="(.*?)\s*"/, '') if remove_ns
       @replaceable_files[file] = content
+    end
+
+    #generates an array of hashes with filename and full url
+    #for all images to be embeded in the word document
+    def local_images(source)
+      source.css('img').each_with_index do |image,i|
+        filename = image['data-filename'] ? image['data-filename'] : image['src'].split("/").last
+        @image_files << { filename: "image#{i+1}#{File.extname(filename)}", url: image['src'], ext: File.extname(filename) }
+      end
     end
   end
 end
