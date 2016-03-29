@@ -67,9 +67,7 @@ module Htmltoword
             elsif @replaceable_files[entry.name]
               out.write(@replaceable_files[entry.name])
             elsif entry.name == Document.content_types_xml_file
-              File.open(File.join(::Htmltoword.config.default_templates_path, '[Content_Types].xml')) do |f|
-                out.write(f.read)
-              end
+              out.write(inject_image_content_types(entry.get_input_stream.read)) if @image_files.size > 0
             else
               out.write(template_zip.read(entry.name))
             end
@@ -115,8 +113,43 @@ module Htmltoword
     def local_images(source)
       source.css('img').each_with_index do |image,i|
         filename = image['data-filename'] ? image['data-filename'] : image['src'].split("/").last
-        @image_files << { filename: "image#{i+1}#{File.extname(filename)}", url: image['src'], ext: File.extname(filename) }
+        ext = ext_from_filename(filename)
+
+        @image_files << { filename: "image#{i+1}.#{ext}", url: image['src'], ext: ext }
       end
+    end
+
+    #get extension from filename and clean to match content_types
+    def ext_from_filename(filename)
+      ext = File.extname(filename).delete(".").downcase
+
+      case ext
+      when "jpg" then "jpeg"
+      when "tif" then "tiff"
+      else ext
+      end
+    end
+
+    #add a method to document.rb to inject the required content_types into the file...
+    def inject_image_content_types(source)
+      doc = Nokogiri::XML(source)
+
+      #get a list of all extensions currently in content_types file
+      existing_exts = doc.css("Default").map { |node| node.attribute("Extension").value }.compact
+
+      #get a list of extensions we need for our images
+      required_exts = @image_files.map{ |i| i[:ext] }
+
+      #workout which required extensions are missing from the content_types file
+      missing_exts = (required_exts - existing_exts).uniq
+
+      #inject missing extensions into document
+      missing_exts.each do |ext|
+        doc.at_css("Types").add_child( "<Default Extension='#{ext}' ContentType='image/#{ext}'/>")
+      end
+
+      #return the amended source to be saved into the zip
+      doc.to_s
     end
   end
 end
