@@ -67,12 +67,15 @@ module Htmltoword
             elsif @replaceable_files[entry.name]
               out.write(@replaceable_files[entry.name])
             elsif entry.name == Document.content_types_xml_file
-              out.write(inject_image_content_types(entry.get_input_stream.read)) if @image_files.size > 0
+              raw_file = entry.get_input_stream.read
+              content_types = @image_files.empty? ? raw_file : inject_image_content_types(raw_file)
+
+              out.write(content_types)
             else
               out.write(template_zip.read(entry.name))
             end
           end
-          if @image_files.size > 0
+          unless @image_files.empty?
           #stream the image files into the media folder using open-uri
             @image_files.each do |hash|
               out.put_next_entry("word/media/#{hash[:filename]}")
