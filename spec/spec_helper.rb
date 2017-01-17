@@ -27,6 +27,10 @@ def compare_relations_xml(html, expected_xml)
   compare_xml(html: html, stylesheet_name: 'relations', expected_xml: expected_xml)
 end
 
+def compare_comments_xml(html, expected_xml)
+  compare_xml(html: html, stylesheet_name: 'comments', expected_xml: expected_xml)
+end
+
 def compare_xml(html:, stylesheet_name:, expected_xml:)
   source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
   stylesheet = xslt(stylesheet_name: stylesheet_name)
