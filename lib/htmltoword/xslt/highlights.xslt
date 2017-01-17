@@ -31,13 +31,14 @@
     <xsl:choose>
       <xsl:when test="./span[contains(concat(' ', @class, ' '), ' ms-comment ')]">
         <xsl:variable name="comment-id" select="count(preceding::span[contains(concat(' ', @class, ' '), ' ms-comment ')]) + 1"/>
-        <xsl:variable name="highlight-text" select="text()"/>
+        <xsl:variable name="comment-text" select="./span[contains(concat(' ', @class, ' '), ' ms-comment ')]"/>
+        <xsl:variable name="highlight-text" select="concat(substring-before(., $comment-text), ' ', substring-after(., $comment-text))"/>
         <w:commentRangeStart w:id="{$comment-id}" />
         <w:r>
           <w:rPr>
             <w:highlight w:val="{$color}"/>
           </w:rPr>
-          <w:t xml:space="preserve"><xsl:value-of select="$highlight-text"/></w:t>
+          <w:t xml:space="preserve"><xsl:value-of select="normalize-space($highlight-text)"/></w:t>
         </w:r>
         <w:commentRangeEnd w:id="{$comment-id}" />
         <w:r>
