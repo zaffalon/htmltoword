@@ -20,17 +20,16 @@ def compare_resulting_wordml_with_expected(html, resulting_wordml, extras: false
 end
 
 def compare_numbering_xml(html, expected_xml)
-  source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
-  stylesheet = xslt(stylesheet_name: 'numbering')
-  result = stylesheet.transform(source)
-  result.xpath('//comment()').remove
-  result = remove_declaration(result.to_s)
-  expect(remove_whitespace(result.to_s)).to eq(remove_whitespace(expected_xml))
+  compare_xml(html: html, stylesheet_name: 'numbering', expected_xml: expected_xml)
 end
 
 def compare_relations_xml(html, expected_xml)
+  compare_xml(html: html, stylesheet_name: 'relations', expected_xml: expected_xml)
+end
+
+def compare_xml(html:, stylesheet_name:, expected_xml:)
   source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
-  stylesheet = xslt(stylesheet_name: 'relations')
+  stylesheet = xslt(stylesheet_name: stylesheet_name)
   result = stylesheet.transform(source)
   result.xpath('//comment()').remove
   result = remove_declaration(result.to_s)
