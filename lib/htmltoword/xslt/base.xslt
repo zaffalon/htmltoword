@@ -19,6 +19,7 @@
   <xsl:include href="./functions.xslt"/>
   <xsl:include href="./tables.xslt"/>
   <xsl:include href="./links.xslt"/>
+  <xsl:include href="./highlights.xslt"/>
 
   <xsl:template match="/">
     <xsl:apply-templates />
@@ -229,39 +230,6 @@
     </w:p>
   </xsl:template>
 
-  <xsl:template match="span[contains(concat(' ', @class, ' '), ' h ')]">
-    <xsl:comment>
-        This template adds MS Word highlighting ability.
-      </xsl:comment>
-    <xsl:variable name="color">
-      <xsl:choose>
-        <xsl:when test="./@data-style='pink'">magenta</xsl:when>
-        <xsl:when test="./@data-style='blue'">cyan</xsl:when>
-        <xsl:when test="./@data-style='orange'">darkYellow</xsl:when>
-        <xsl:otherwise><xsl:value-of select="./@data-style"/></xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:choose>
-      <xsl:when test="preceding-sibling::h1 or preceding-sibling::h2 or preceding-sibling::h3 or preceding-sibling::h4 or preceding-sibling::h5 or preceding-sibling::h6 or preceding-sibling::table or preceding-sibling::p or preceding-sibling::ol or preceding-sibling::ul or preceding-sibling::div or following-sibling::h1 or following-sibling::h2 or following-sibling::h3 or following-sibling::h4 or following-sibling::h5 or following-sibling::h6 or following-sibling::table or following-sibling::p or following-sibling::ol or following-sibling::ul or following-sibling::div">
-        <w:p>
-          <w:r>
-            <w:rPr>
-              <w:highlight w:val="{$color}"/>
-            </w:rPr>
-            <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-          </w:r>
-        </w:p>
-      </xsl:when>
-      <xsl:otherwise>
-        <w:r>
-          <w:rPr>
-            <w:highlight w:val="{$color}"/>
-          </w:rPr>
-          <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
-        </w:r>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
 
   <xsl:template match="div[contains(concat(' ', @class, ' '), ' -page-break ')]">
     <w:p>
