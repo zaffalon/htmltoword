@@ -48,7 +48,7 @@ def compare_content_of_body?(wordml)
 end
 
 def remove_whitespace(wordml)
-  wordml.gsub(/\s+/, ' ').gsub(/>\s+</, '><').strip
+  wordml.gsub(/\s+/, ' ').gsub(/(?<keep>>)\s+|\s+(?<keep><)/, '\k<keep>').strip
 end
 
 def remove_declaration(wordml)
