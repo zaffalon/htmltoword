@@ -6,8 +6,8 @@ include Htmltoword::XSLTHelper
 include Htmltoword::TemplatesHelper
 
 def compare_transformed_files(test, test_file_name, extras: false)
-  source = File.read(fixture_path(test, test_file_name, :html))
-  expected_content = File.read(fixture_path(test, test_file_name, :xml))
+  source = File.read(fixture_path(test, test_file_name, :html), encoding: 'utf-8')
+  expected_content = File.read(fixture_path(test, test_file_name, :xml), encoding: 'utf-8')
   compare_resulting_wordml_with_expected(source, expected_content, extras: extras)
 end
 
