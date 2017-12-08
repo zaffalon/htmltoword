@@ -33,7 +33,7 @@ describe Htmltoword::Document do
           expect(zip_file.glob('word/media/*').size).to eq 6
         end
       ensure
-        #File.delete(tmp_path(filename))
+        File.delete(tmp_path(filename))
       end
     end
   end
