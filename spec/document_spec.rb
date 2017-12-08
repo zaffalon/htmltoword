@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'securerandom'
 
 describe Htmltoword::Document do
   describe "local_images" do
