@@ -61,7 +61,7 @@ def my_action
   # ...
   respond_with(@object, filename: 'my_file.docx', word_template: 'my_template.docx')
   # Alternatively, if you don't want to create the .docx.erb template you could
-  respond_with(@object, content: '<html><body>some html</body></html>', filename: 'my_file.docx')
+  respond_with(@object, content: '<html><head></head><body><p>Hello</p></body></html>', filename: 'my_file.docx')
 end
 
 def my_action2
@@ -70,7 +70,7 @@ def my_action2
     format.docx do
       render docx: 'my_view', filename: 'my_file.docx'
       # Alternatively, if you don't want to create the .docx.erb template you could
-      render docx: 'my_file.docx', content: '<html><body>some html</body></html>'
+      render docx: 'my_file.docx', content: '<html><head></head><body><p>Hello</p></body></html>'
     end
   end
 end
