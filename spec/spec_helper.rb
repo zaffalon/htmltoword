@@ -37,6 +37,14 @@ def compare_relations_xml(html, expected_xml)
   expect(remove_whitespace(result.to_s)).to eq(remove_whitespace(expected_xml))
 end
 
+def check_link_text(html, resulting_wordml, extras: false)
+  source = Nokogiri::HTML(html.gsub(/>\s+</, '><'))
+  result = Htmltoword::Document.new(template_file(nil)).transform_doc_xml(source, extras)
+  result.gsub!(/\s*<!--(.*?)-->\s*/m, '')
+  result = remove_declaration(result)
+  expect(remove_whitespace_for_link_check(result)).to eq(remove_whitespace_for_link_check(resulting_wordml))
+end
+
 private
 
 def fixture_path(folder, file_name, extension)
@@ -54,6 +62,10 @@ end
 
 def remove_whitespace(wordml)
   wordml.gsub(/\s+/, ' ').gsub(/(?<keep>>)\s+|\s+(?<keep><)/, '\k<keep>').strip
+end
+
+def remove_whitespace_for_link_check(wordml)
+  wordml.gsub(/^\s+/, '')
 end
 
 def remove_declaration(wordml)
