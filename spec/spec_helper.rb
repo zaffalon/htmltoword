@@ -5,7 +5,7 @@ require 'htmltoword'
 include Htmltoword::XSLTHelper
 include Htmltoword::TemplatesHelper
 
-def compare_transformed_files(test, test_file_name, extras: false)
+def compare_transformed_files(test:, test_file_name:, extras: false)
   source = File.read(fixture_path(test, test_file_name, :html), encoding: 'utf-8')
   expected_content = File.read(fixture_path(test, test_file_name, :xml), encoding: 'utf-8')
   compare_resulting_wordml_with_expected(source, expected_content, extras: extras)
@@ -16,6 +16,7 @@ def compare_resulting_wordml_with_expected(html, resulting_wordml, extras: false
   result = Htmltoword::Document.new(template_file(nil)).transform_doc_xml(source, extras)
   result.gsub!(/\s*<!--(.*?)-->\s*/m, '')
   result = remove_declaration(result)
+
   expect(remove_whitespace(result)).to eq(remove_whitespace(resulting_wordml))
 end
 
