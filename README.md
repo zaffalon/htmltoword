@@ -148,6 +148,21 @@ To create page breaks simply add a div with class -page-break ie:
 <div class="-page-break"></div>
 ````
 
+### Images
+Support for images is very basic and is only possible for external images(i.e accessed via URL). If the image doesn't 
+have correctly defined it's width and height it won't be included in the document
+
+**Limitations:**
+- Images are external i.e. pictures accessed via URL, not stored within document
+- only sizing is customisable
+
+Examples:
+```html
+<img src="http://placehold.it/250x100.png" style="width: 250px; height: 100px">
+<img src="http://placehold.it/250x100.png" data-width="250px" data-height="100px">
+<img src="http://placehold.it/250x100.png" data-height="150px" style="width:250px; height:100px">
+```
+
 ## Contributing / Extending
 
 Word docx files are essentially just a zipped collection of xml files and resources.
