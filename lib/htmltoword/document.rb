@@ -79,7 +79,7 @@ module Htmltoword
           #stream the image files into the media folder using open-uri
             @image_files.each do |hash|
               out.put_next_entry("word/media/#{hash[:filename]}")
-              open(hash[:url], 'rb') do |f|
+              URI.open(hash[:url], 'rb') do |f|
                 out.write(f.read)
               end
             end
