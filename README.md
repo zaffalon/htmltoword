@@ -15,7 +15,14 @@ Or install it yourself as:
     $ gem install htmltoword
 
 
-** Note: ** Since version 0.4.0 the ```create``` method will return a string with the contents of the file. If you want to save the file please use ```create_and_save```. See the usage for more
+**Note:** Since version 0.4.0 the ```create``` method will return a string with the contents of the file. If you want to save the file please use ```create_and_save```. See the usage for more
+
+### Security warnings
+In versions `0.7.0` and `1.0.0` we introduced a security vulnerability when allowing
+the use of local images since no check to the files was done, potentially exposing 
+sensitive files in the output zipfile.
+
+Version `1.1.0` doesn't allow the use of local images but uses an insecure `open`
 
 ## Usage
 
