@@ -30,7 +30,7 @@
       </w:p>
       <w:sectPr>
         <w:pgSz w:w="11906" w:h="16838"/>
-        <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+        <w:pgMar w:top="0" w:right="0" w:bottom="0" w:left="0" w:header="0" w:footer="0" w:gutter="0"/>
         <w:cols w:space="708"/>
         <w:docGrid w:linePitch="360"/>
       </w:sectPr>
