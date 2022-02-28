@@ -94,6 +94,7 @@
     <xsl:variable name="length" select="string-length(name(.))"/>
     <w:p>
       <w:pPr>
+        <w:rFonts w:ascii="Courier New" w:cs="Times New Roman" />
         <w:pStyle w:val="Heading{substring(name(.),$length)}"/>
       </w:pPr>
       <w:r>
